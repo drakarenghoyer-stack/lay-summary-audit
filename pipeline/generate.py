@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 from anthropic import Anthropic
 
 MODEL = "claude-sonnet-5"
-TABLE = "examples/evidence-table-commission.json"
+TABLE = "examples/evidence-table-inference.json"
 PROMPT = "prompts/generator.md"
-OUT = "runs/lay-summary-commission.md"
+OUT = "runs/lay-summary-inference.md"
 
 load_dotenv()
 client = Anthropic()

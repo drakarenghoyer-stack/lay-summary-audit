@@ -1,0 +1,39 @@
+{
+  "trial_id": "SYNTH-001-INF",
+  "condition": "type 2 diabetes with established cardiovascular disease",
+  "intervention": "synthemide 15 mg once daily",
+  "comparator": "placebo",
+  "design": "randomised, double-blind, placebo-controlled",
+  "statistical_analysis_plan": "Two-sided alpha of 0.05. Outcomes are tested in a fixed hierarchical sequence: the primary outcome is tested first, and secondary outcomes are formally tested only if the primary outcome reaches significance. No alpha adjustment is applied to secondary outcomes outside that sequence.",
+  "arms": [
+    { "name": "intervention", "n": 2400 },
+    { "name": "placebo", "n": 2398 }
+  ],
+  "outcomes": [
+    {
+      "rank": "primary",
+      "measure": "3-point MACE (cardiovascular death, non-fatal MI, non-fatal stroke) at 104 weeks",
+      "events_intervention": 316,
+      "events_placebo": 347,
+      "effect_type": "hazard_ratio",
+      "point_estimate": 0.91,
+      "ci_95": [0.79, 1.05],
+      "p_value": 0.19
+    },
+    {
+      "rank": "secondary",
+      "measure": "change in HbA1c from baseline at 52 weeks (percentage points)",
+      "mean_change_intervention": -0.94,
+      "mean_change_placebo": -0.26,
+      "effect_type": "mean_difference",
+      "point_estimate": -0.68,
+      "ci_95": [-0.81, -0.55],
+      "p_value": 0.0001
+    }
+  ],
+  "adverse_events": [
+    { "term": "nausea", "intervention_pct": 22.4, "placebo_pct": 9.1 },
+    { "term": "hypoglycaemia", "intervention_pct": 4.8, "placebo_pct": 3.9 },
+    { "term": "acute pancreatitis", "intervention_pct": 0.4, "placebo_pct": 0.2 }
+  ]
+}
