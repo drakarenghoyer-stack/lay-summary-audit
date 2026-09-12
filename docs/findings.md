@@ -204,3 +204,21 @@ remove the familiarity advantage. Planning figure: 8 to 10 minutes per case,
 putting a 50-case panel at 7 to 8 hours of annotation. Viable.
 
 Annotation, not construction, is the cost that scales with panel size.
+
+## 2026-09-12 — Development C5 case-004
+
+One development case, one execution. Auditor prompt v0.2.
+
+The summary was altered by substitution to include the correct HbA1c
+effect magnitude (0.68 percentage points), while retaining the
+qualifications about blocked confirmatory testing.
+
+The auditor returned one C5 finding, with unambiguous localisation
+and a pertinent supporting reference. No additional findings were returned.
+
+Output: runs/audit-case-004.json
+Output commit: b4cbbf1
+
+This exercises the project's presentation policy. It does not establish
+general performance or isolate understanding of gatekeeping.
+The case is excluded from all final-panel denominators.
