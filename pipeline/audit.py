@@ -6,10 +6,11 @@ from anthropic import Anthropic
 
 MODEL = "claude-sonnet-5"
 TABLE = "examples/evidence-table-inference.json"
-SUMMARY = "runs/lay-summary-inference.md"
+SUMMARY = sys.argv[1]
 PROMPT = "prompts/auditor.md"
-OUT = "runs/audit-inference.json"
+OUT = "runs/audit-" + pathlib.Path(sys.argv[1]).stem + ".json"
 
+print("=== " + SUMMARY + " ===")
 load_dotenv()
 client = Anthropic()
 
