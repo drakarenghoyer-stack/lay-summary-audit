@@ -1,0 +1,58 @@
+{
+  "trial_id": "PARAGON-HF",
+  "registration_id": "NCT01920711",
+  "condition": "heart failure with ejection fraction 45% or higher, NYHA class II to IV, elevated natriuretic peptides, structural heart disease",
+  "intervention": "sacubitril-valsartan, target dose 97 mg sacubitril with 103 mg valsartan twice daily",
+  "comparator": "valsartan, target dose 160 mg twice daily",
+  "design": "randomised, double-blind, active-comparator-controlled",
+  "arms": [
+    { "name": "intervention", "n": 2407 },
+    { "name": "comparator", "n": 2389 }
+  ],
+  "statistical_analysis_plan": {
+    "alpha_threshold_two_sided": 0.048,
+    "alpha_note": "final two-sided threshold, adjusted for the interim analysis",
+    "gatekeeping": "Secondary hypotheses are tested confirmatorily only if the primary hypothesis is rejected. The renal composite is among the gated secondary hypotheses.",
+    "source": {
+      "document": "PARAGON-HF statistical analysis plan",
+      "location": "section 9.3.2.1, pp. 35-36",
+      "consulted": "2026-09-11"
+    }
+  },
+  "outcomes": [
+    {
+      "rank": "primary",
+      "measure": "total hospitalisations for heart failure and death from cardiovascular causes",
+      "effect_type": "rate_ratio",
+      "events_intervention": 894,
+      "events_comparator": 1009,
+      "patients_with_event_intervention": 526,
+      "patients_with_event_comparator": 557,
+      "point_estimate": 0.87,
+      "ci_95": [0.75, 1.01],
+      "p_value": 0.06,
+      "source": {
+        "document": "NEJM 2019, Solomon et al., Angiotensin-Neprilysin Inhibition in Heart Failure with Preserved Ejection Fraction",
+        "location": "Table 2",
+        "consulted": "2026-09-11"
+      }
+    },
+    {
+      "rank": "key_secondary",
+      "measure": "renal composite: 50% or greater decrease in estimated glomerular filtration rate, development of end-stage renal disease, or death from renal causes",
+      "effect_type": "hazard_ratio",
+      "patients_with_event_intervention": 33,
+      "patients_with_event_comparator": 64,
+      "pct_intervention": 1.4,
+      "pct_comparator": 2.7,
+      "point_estimate": 0.50,
+      "ci_95": [0.33, 0.77],
+      "p_value": "not reported",
+      "source": {
+        "document": "NEJM 2019, Solomon et al.",
+        "location": "Table 2",
+        "consulted": "2026-09-11"
+      }
+    }
+  ]
+}
