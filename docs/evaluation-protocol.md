@@ -202,3 +202,40 @@ gold-standard stage 0 output for each trial. Stage 0 is out of scope for the
 current design and is the stage the findings log identifies as the likely locus
 of risk. The extraction artefacts are therefore an input to a future stage 0
 evaluation, not only a means to this one.
+
+## Kappa — superseded
+
+The "Kappa — design pending" section above is superseded. No inter-rater kappa
+is planned for this stage.
+
+**Decision for this stage:** pre-specified correspondence rule with worked
+boundary examples; sole annotator, declared; intra-rater re-assessment
+optional, not a pilot requirement.
+
+Sensitivity, specificity and stability remain the focus, each reported
+conditional on the quality of the reference standard.
+
+### If intra-rater re-assessment is done
+
+It re-judges the same frozen auditor outputs, with order and identifiers
+shuffled, without access to the prior judgement. Re-running the auditor would
+measure something else: model stability, which has its own metric.
+
+The subset is chosen in advance and spans codes, negatives and source trials.
+Any subset of this size is exploratory; it is not a size justified for
+estimating agreement with precision.
+
+Report raw agreement and the disagreements alongside any kappa. Kappa depends
+on the distribution of categories and is undefined when all judgements fall in
+one category, which is plausible here.
+
+**Consistency is not correctness.** The same mistaken rule can be applied on
+both occasions. Absence of independent review remains a limitation regardless
+of the intra-rater result.
+
+### Criterion for a second rater, if one becomes available
+
+Demonstrated competence in applying the taxonomy, training on the rule, and
+independence from the panel's construction. Clinical or regulatory background
+matters where the judgement requires medical interpretation, which applies to
+some codes and not to all. The criterion is competence, not profession.
