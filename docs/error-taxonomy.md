@@ -1,10 +1,10 @@
-# Error taxonomy — v0.1
+# Error taxonomy — v0.2
 
 Derived from the sources pinned in `evaluation-protocol.md`. One reading of
 those sources, not an official classification of any authority.
 
 Codes are added only when a case has been observed or is specifically
-required by a source. This file starts at 5 codes, not 13; the remainder are
+required by a source. This file starts at 6 codes, not 13; the remainder are
 to be derived from the Annex V elements and from annotation of real cases.
 
 ## Commission — unit: the verifiable claim
@@ -31,6 +31,12 @@ denominator, wrong direction, or an arithmetic derivation that does not
 follow from the table.
 Source: GLSP v1 §3.3.8 (quality control against source).
 
+**C5 — Untested outcome given an effect estimate.**
+Reports a point estimate, difference, ratio or per-arm value for an outcome
+that falls outside the confirmatory testing sequence. Applies whether or not
+the statement is qualified.
+Source: GLSP v1 §2.2.1, §2.2.2; CTR Q&A July 2026 §6.2. See annotation rule 2.
+
 ## Omission — unit: the required element
 
 **O1 — Uncertainty not qualified.**
@@ -45,9 +51,3 @@ Codes for the remaining Annex V elements (trial identification, sponsor,
 population, adverse reactions and frequency, comments on outcome, follow-up
 trials, where to find more information) are pending. Each requires deciding
 what counts as materially incomplete for that element.
-
-**C5 — Untested outcome given an effect estimate.**
-Reports a point estimate, difference, ratio or per-arm value for an outcome
-that falls outside the confirmatory testing sequence. Applies whether or not
-the statement is qualified.
-Source: GLSP v1 §2.2.1, §2.2.2; CTR Q&A July 2026 §6.2. See annotation rule 2.
