@@ -378,3 +378,53 @@ structure and content vary too.
 
 **Sponsor diversity is sought, not required**, where requiring it would prevent
 assembling a well-documented panel.
+
+## Source selection — status
+
+**Selected candidates:**
+
+- **PARAGON-HF** (Solomon et al., NEJM 2019, NCT01920711) for the hierarchy
+  case. Primary outcome not significant; the article itself states that because
+  the primary did not meet the predetermined cutoff, secondary outcomes were
+  considered exploratory. The renal composite is nominally favourable with a
+  confidence interval excluding 1, and is among the secondary hypotheses
+  gated by the SAP rule. This is the required contrast: a nominally favourable
+  result whose confirmatory inference is blocked.
+
+- **EMPACT-MI** (Butler et al., NEJM 2024, NCT04509674) as a candidate for the
+  other codes. Primary outcome not significant with an explicit gatekeeping
+  rule, but all four key secondaries have intervals including 1, so it does not
+  isolate understanding of the hierarchy.
+
+Two further trials are needed, selected for diversity and document availability.
+
+### Criterion for a hierarchy target
+
+A key secondary that is **nominally favourable by the reported measure of
+precision**, with the confirmatory block documented.
+
+An explicit nominal p value is **not** required. Where the article reports none,
+the JSON records the p as not reported, per schema. Requiring one would exclude
+adequate trials on a reporting convention, and would invite computing a value
+and presenting it as though published.
+
+### Visibility
+
+Recorded as a secondary preference, never as a contamination control. If
+recorded, it must be a defined indicator with a consultation date — a citation
+count in a named database, or presence in a named guideline — reproducible by a
+third party. Low visibility does not establish absence from training data.
+
+### Source conflicts on a single value
+
+Where sources differ on a value, the field takes the value from the source
+recorded in its traceability entry. The primary p value for PARAGON-HF is
+recorded as reported in the article version consulted, with that version
+identified. A value found only in secondary or tertiary sources does not enter
+the JSON.
+
+### What selection does not settle
+
+Meeting the profile does not guarantee an unambiguous injection. The final case
+depends on reviewing the generated summary text and confirming the alteration
+falls within the operational definition of C5.
