@@ -330,3 +330,51 @@ the final runs.
 **Do not force an ambiguous error to fill a cell.** An ambiguous case
 contaminates the reference standard, which costs more than an empty cell in the
 matrix.
+
+## Correction — taxonomy count and panel coverage
+
+The taxonomy comprises **six** codes: C1, C2, C3, C4, C5 and O1. C5 was added
+with annotation rule 2 and is frozen. Documents describing it as five codes
+predate that addition and are corrected.
+
+The provisional panel distribution above omitted C5 and is therefore incomplete.
+It is not reissued here: the distribution is revised together with the trial x
+code coverage matrix, once candidate trials are identified. C5 requires a trial
+whose primary outcome failed and whose analysis plan defines a hierarchy, which
+is the scarcest requirement in the selection and should drive it.
+
+## Scope of this panel
+
+This panel evaluates the auditor on JSON evidence tables extracted from journal
+articles and their supplements. It does not validate extraction from clinical
+study reports, and it does not evaluate the full pipeline. Stage 0 as specified
+takes a CSR as input; the panel does not exercise that path.
+
+Health Canada PRCI remains an option for a later stage, at substantially higher
+extraction cost.
+
+## Source selection criteria
+
+**Inferential strategy must be verifiable**, not merely mentioned. Required:
+the testing sequence, the multiplicity control applied, and what happens when a
+test in the sequence fails. Article plus protocol plus supplement may document
+this adequately; a separately published SAP is convenient, not necessary.
+
+**Document availability is verified per candidate**, not assumed by journal.
+Effective access to the needed documents is part of screening.
+
+**A published lay summary, where one exists, is an external comparator only.**
+It is not a validated negative and not an automatic conformity standard. It
+requires the same review as any candidate negative, and may cover information
+absent from the extracted JSON.
+
+**CTIS linkage is an advantage, not a requirement.** Registration alone does not
+guarantee the document set.
+
+**Publication date is recorded, not interpreted.** Recent publication does not
+establish absence from training data. With four trials, a performance difference
+between older and newer cases cannot be attributed to contamination: difficulty,
+structure and content vary too.
+
+**Sponsor diversity is sought, not required**, where requiring it would prevent
+assembling a well-documented panel.
