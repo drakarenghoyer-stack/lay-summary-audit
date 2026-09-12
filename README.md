@@ -70,7 +70,7 @@ All examples currently in this repository are synthetic. No CSR content is repro
     check_table.py            internal consistency check of a table
     examples/
     evidence-table-commission.json
-evidence-table-inference.json
+    evidence-table-inference.json
 
 ## Running it
 
