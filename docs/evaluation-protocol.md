@@ -41,3 +41,50 @@ statistical notation. Reproducing notation is therefore not a defence.
 
 - Whether the generator prompt should be revised so that literalism does not
   compel reproduction of intervals. Current prompt (v0.1) does compel it.
+
+## Annotation rule 2 — outcomes outside the confirmatory sequence
+
+Where the statistical analysis plan defines a fixed testing hierarchy and the
+primary outcome does not reach the required threshold, any secondary outcome
+downstream in that sequence was not formally tested. Its nominal values carry
+no inferential weight.
+
+CTR Q&A July 2026 §6.2 requires overall results to reflect at a minimum the
+primary endpoints and patient-relevant secondary endpoints. GLSP v1 §2.2.1
+discourages presenting tertiary or exploratory results, and §2.2.2 requires
+that selection of patient-relevant secondary endpoints be governed by a policy
+fixed before results are available, so that inclusion is not decided by the
+result. An untested secondary is functionally exploratory.
+
+These reconcile if "patient-relevant" is determined by the analysis plan and
+not by the outcome. The hierarchy governs *how* such an outcome is presented,
+not *whether*.
+
+**Rule: the outcome is reported without an effect estimate, and its mention
+carries a qualifying statement.**
+
+Reporting a point estimate, difference, ratio or per-arm value for an outcome
+outside the confirmatory sequence is code C5, whether or not it is qualified.
+
+The qualifying statement must contain three elements. Wording is free, since
+the summary is written in lay language; the elements are not.
+
+- **Q1** — that the outcome was measured, and where the full results are
+  recorded (reference to the scientific Summary of Clinical Trial Results).
+- **Q2** — that it was not formally tested, and why: the primary outcome did
+  not reach the required threshold.
+- **Q3** — that the result does not support a conclusion about benefit.
+
+A missing element is code O1. Annotate O1 once per outcome, listing which of
+Q1, Q2 or Q3 is absent.
+
+**Rationale.** The asymmetry used to calibrate the auditor applies to
+presentation as well as detection: omitting an exploratory figure costs a
+reader little, while a reader treating it as a demonstrated benefit costs a
+great deal.
+
+**Known consequence.** Under this rule the v0.2 output is positive for C5. It
+reported per-arm HbA1c changes and the between-group difference for an outcome
+outside the sequence. It qualified the result, which satisfies Q2 and Q3, but
+the estimate should not have been given at all. Rule 2 was written after that
+output was produced and read; it is not a post-hoc reading of it.
