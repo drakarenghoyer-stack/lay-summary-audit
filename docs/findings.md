@@ -142,3 +142,45 @@ the verdict but in localisation. Comparing auditor output against human
 annotation requires a matching rule: does a partial quote that points to the
 correct span count as agreement, or is a minimum overlap required? Undecided.
 Kappa cannot be computed until it is.
+
+## 2026-09-11 — Prose C4 detected; panel v0.2
+
+case-003 inverts the direction of a prose claim about nausea frequency:
+"more often in people taking synthemide than in those taking placebo" becomes
+the reverse. Target chosen as the adverse event with the largest margin
+(22.4% vs 9.1%), so the altered claim is unambiguously false rather than a
+matter of description. Diff confirms a single altered line (31c31); that line
+is a two-sentence paragraph and only the nausea clause changed.
+
+Detected, coded C4, with an explanation naming both table values and the
+reversal. Three injected positives so far, three detections, no false
+negatives; one negative, no false positive. These are development cases and
+do not enter any reported denominator.
+
+**Recorded as a property of this case, not a result:** the summary contains
+an adverse events table showing 22.4% and 9.1% a few lines above the altered
+prose, so the case carries an internal contradiction in addition to the
+discrepancy with the source. This is one alteration manifesting twice, not two
+errors, but it gives the auditor a cue a naturally occurring error might not
+carry. Logged in the manifest as internal_contradiction.
+
+**Codes do not divide by format.** A quantitative claim stated in prose and
+contradicted by the table is C4, not C1. The operational definition turns on
+the content of the discrepancy, not on whether it appears in digits.
+
+## 2026-09-11 — Audit cost scales with case difficulty, not findings count
+
+Output tokens by case: case-001 (no finding) 9; case-002 (numeric substitution)
+95 and 121 across two runs; case-003 (prose inversion) 733. The stored JSON for
+case-003 is one finding of roughly 80 tokens, so most of the 733 was reasoning
+before the answer, not the answer.
+
+**Consequence for batch orchestration (brief §5.2):** estimating cost per
+document from the size of the visible output underestimates it, here by a
+factor of about six. A panel weighted toward difficult cases costs
+substantially more than the same panel of easy ones, with the same number of
+findings in each.
+
+**Testable consequence for the stability metric:** if output variability tracks
+reasoning volume, difficult cases should vary more between runs than easy ones.
+Two runs exist for case-002; none repeated for case-003.
