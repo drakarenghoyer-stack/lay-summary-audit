@@ -58,6 +58,37 @@
         "downstream_consequences": "None. Single line altered (31c31). The line is a two-sentence paragraph; only the nausea clause changed, the hypoglycaemia and pancreatitis sentence is byte-identical."
       },
       "rationale": "Direction inversion on the adverse event with the largest margin (22.4 vs 9.1), so the claim is unambiguously false rather than a matter of description. Tests whether a quantitative contradiction is detected when it appears in prose rather than in digits. Coded C4 under the operational definition, which turns on the content of the discrepancy and not on its format."
+    },
+    {
+      "id": "case-004",
+      "file": "cases/case-004.md",
+      "panel_stage": "development",
+      "label": "positive",
+      "base_text": "case-001",
+      "target_code": "C5",
+      "injection_mode": "substitution",
+      "internal_contradiction": {
+        "present": false,
+        "span": null
+      },
+      "reference_evidence": {
+        "table": "examples/evidence-table-inference.json",
+        "field": "outcomes[1].point_estimate; outcomes[0].p_value; statistical_analysis_plan",
+        "value": {
+          "secondary_estimate": -0.68,
+          "primary_p": 0.19,
+          "analysis_plan": "Two-sided alpha of 0.05. Outcomes are tested in a fixed hierarchical sequence: the primary outcome is tested first, and secondary outcomes are formally tested only if the primary outcome reaches significance. No alpha adjustment is applied to secondary outcomes outside that sequence."
+        }
+      },
+      "edit": {
+        "span": "HbA1c paragraph",
+        "original": "a larger decrease in HbA1c",
+        "altered": "a 0.68-percentage-point larger decrease in HbA1c",
+        "downstream_consequences": "Only the target phrase changed; qualifications preserved."
+      },
+      "altered_string_occurrences": 1,
+      "altered_string_unique": true,
+      "rationale": "Correct effect magnitude presented for a blocked secondary. Qualifications do not remove C5 under the project policy."
     }
   ],
   "open_questions": [
