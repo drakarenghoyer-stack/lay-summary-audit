@@ -23,7 +23,10 @@ response = client.messages.create(
     ],
 )
 
-summary = response.content[0].text
+blocks = [b for b in response.content if b.type == "text"]
+if not blocks:
+    raise SystemExit("No text block in response")
+summary = "\n".join(b.text for b in blocks)
 
 pathlib.Path("runs").mkdir(exist_ok=True)
 pathlib.Path(OUT).write_text(summary)
