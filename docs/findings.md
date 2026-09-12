@@ -184,3 +184,23 @@ findings in each.
 **Testable consequence for the stability metric:** if output variability tracks
 reasoning volume, difficult cases should vary more between runs than easy ones.
 Two runs exist for case-002; none repeated for case-003.
+
+## 2026-09-11 — Annotation cost measured on one case
+
+case-002 was annotated from scratch by the author, without consulting the
+manifest, against the evidence table under taxonomy v0.1. **Five minutes, one
+finding**, matching the manifest. Independent reading confirms case-002 is a
+single-error case.
+
+Construction of case-003 took roughly ten minutes, with the target selection,
+margin check and manifest text supplied in conversation rather than decided
+alone; unassisted construction would take longer.
+
+**Use for panel sizing.** Five minutes is a floor, not a mean. case-002 is the
+easiest available case: one substituted number in a table, in a base text the
+annotator had already read. C5 and O1 require reasoning about the testing
+hierarchy and checking three qualification elements; different base texts
+remove the familiarity advantage. Planning figure: 8 to 10 minutes per case,
+putting a 50-case panel at 7 to 8 hours of annotation. Viable.
+
+Annotation, not construction, is the cost that scales with panel size.
