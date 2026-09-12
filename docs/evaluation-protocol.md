@@ -290,3 +290,43 @@ of independent agreement.
 
 Rules are closed using the development cases and then applied unchanged to the
 final panel.
+
+## Correspondence rule — three amendments
+
+### 1. Record count and location, not only uniqueness
+
+The manifest records, per positive case: `altered_span`, `occurrence_count` of
+that span in the frozen document, and its location. For O1 these fields may be
+not applicable; record instead the removed text and its position in the
+original.
+
+Uniqueness of the target does not discharge the check. Whether the quote the
+auditor actually produced identifies that span is still assessed per finding.
+
+### 2. Revision handling rule
+
+The original manifest is preserved; corrections are versioned, never
+overwritten.
+
+If review under boundary rule 4 establishes a second true error in a case, that
+case no longer satisfies one-error-per-document. **It is excluded from the
+principal analysis and reported separately.** No replacement case is chosen on
+the basis of auditor performance. Report how many cases and how many results
+were affected.
+
+### 3. Pre-specification does not remove judgement
+
+The rule is pre-specified, and it still requires judgement. Deciding whether an
+additional flag is founded, or whether a localisation is unambiguous, remains
+interpretation. The worked examples guide that judgement; they do not eliminate
+it. With a sole annotator, that judgement is unreviewed.
+
+### Code coverage across trials
+
+Full distribution of every code across every trial is sought where feasible,
+not required. Record a trial x code matrix and confirm total coverage before
+the final runs.
+
+**Do not force an ambiguous error to fill a cell.** An ambiguous case
+contaminates the reference standard, which costs more than an empty cell in the
+matrix.
