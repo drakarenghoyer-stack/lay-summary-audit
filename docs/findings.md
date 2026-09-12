@@ -78,3 +78,27 @@ secondary endpoints. The qualifier "potentially" is absent.
 **Consequence:** the guidance this taxonomy is derived from predates, and
 softens, the interpretation currently in force. Source versions are pinned in
 `evaluation-protocol.md` for this reason.
+
+## 2026-09-11 — Platform divergence in command-line tooling
+
+Development is on macOS (zsh, BSD userland). Two commands used while editing
+project files behave differently under the GNU userland found on most Linux
+systems:
+
+- `sed -i` requires an empty argument on macOS (`sed -i '' 's/a/b/' file`).
+  On GNU sed the empty argument is read as a filename and the command fails.
+- `cat -A` does not exist on macOS; the equivalent is `cat -et`.
+
+Neither affects the pipeline itself, which is Python. Both affect any shell
+step used to prepare, inspect or post-process files.
+
+**Consequence for reproducibility (brief §5.5):** a third party cloning this
+repository on Linux will not reproduce shell-level steps that assume BSD
+tooling. Any shell step that becomes part of the pipeline must either be
+written portably or be replaced by Python. The remote host available for
+future batch orchestration is Linux, so this divergence will surface there
+rather than here.
+
+Recorded because the requirement is that a third party can clone, run, and
+obtain the same number. Platform-dependent tooling is a silent way to fail
+that requirement.
