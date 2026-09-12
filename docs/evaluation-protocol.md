@@ -226,7 +226,7 @@ Any subset of this size is exploratory; it is not a size justified for
 estimating agreement with precision.
 
 Report raw agreement and the disagreements alongside any kappa. Kappa depends
-on the distribution of categories and is undefined when all judgements fall in
+on the distribution of categories and is undefined when both sets of judgements are constant in
 one category, which is plausible here.
 
 **Consistency is not correctness.** The same mistaken rule can be applied on
@@ -239,3 +239,54 @@ Demonstrated competence in applying the taxonomy, training on the rule, and
 independence from the panel's construction. Clinical or regulatory background
 matters where the judgement requires medical interpretation, which applies to
 some codes and not to all. The criterion is competence, not profession.
+
+## Correspondence rule — boundary cases, resolved
+
+Principal correspondence requires correct code plus unambiguous localisation.
+Supporting reference is assessed separately and does not gate the principal
+count.
+
+| Situation | Verdict |
+|---|---|
+| 1. Partial quote | Accept if it unambiguously identifies the altered span. A bare value suffices where that value appears once in the document; where it appears more than once, additional context is required. |
+| 2. Correct localisation, wrong reference | Count the principal detection. Mark the reference incorrect. This prevents describing it as a fully supported detection. |
+| 3. Correct discrepancy, wrong code | Not a hit for sensitivity of the target code. Record separately that the discrepancy was recognised but misclassified. |
+| 4. Additional flag | Preserve the hit on the injected error. Review the additional flag: if unfounded, record a false alert; if founded, revise the reference standard, since the case may contain another error. |
+| 5. Duplicate | Count one detection; record duplication separately. Two findings describing one discrepancy do not produce two hits. |
+| 6. O1 without reference | Count identification of the omission if code and missing mandatory element are unambiguous. Mark support absent. The mandatory status must be demonstrated in the reference standard by the applicable rule and the data required. |
+
+### Denominators do not mix
+
+A false alert on a positive case does not enter the specificity calculation
+over the 12 negatives. False alerts are recorded per case or per finding in a
+separate measure.
+
+On negatives, for document-level specificity, any unfounded alert makes the
+document a false positive.
+
+### Scope of the principal metric
+
+As written, the principal metric is detection: correct code and correct
+localisation. Requiring a correct supporting reference as well would change it
+to evidence-supported detection. That is a different metric and would have to
+be declared before evaluation, not chosen afterwards.
+
+### Two operational consequences
+
+**Uniqueness of the altered string.** Rule 1 is applicable only if uniqueness
+is verified per case rather than judged at annotation time. The manifest
+records, for each positive case, whether the altered string occurs once in the
+document.
+
+**Manifest revision log.** Rule 4 permits revising the reference standard after
+seeing auditor output. Correcting a mislabelled case is legitimate; it is
+indistinguishable from post-hoc adjustment unless logged. Every revision
+records date, reason, what changed, and which auditor output prompted it.
+
+### Status of the boundary examples
+
+Boundary examples make the rule auditable. They do not substitute for evidence
+of independent agreement.
+
+Rules are closed using the development cases and then applied unchanged to the
+final panel.
