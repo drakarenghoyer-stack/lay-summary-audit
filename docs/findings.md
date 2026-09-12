@@ -102,3 +102,43 @@ rather than here.
 Recorded because the requirement is that a third party can clone, run, and
 obtain the same number. Platform-dependent tooling is a silent way to fail
 that requirement.
+
+## 2026-09-11 — Case panel v0.1: first C4 pair
+
+Panel construction validated on one pair. case-001 is the generator v0.3 output
+on the inference table, unmodified. case-002 is identical except for one value
+in the adverse events table: hypoglycaemia in the intervention arm, 4.8% to
+5.8%. Diff confirms a single altered line (28c28), no downstream consequence.
+
+The value was chosen because it appears once in the summary, carries no derived
+percentage or calculation, and the adjacent prose is qualitative and remains
+true after the edit.
+
+**Result.** case-001: no finding. case-002: one finding, correctly coded C4,
+with an explanation naming the table value and the summary value. One true
+negative, one true positive. Output tokens 9 and 95: an empty findings array
+costs almost nothing, which is relevant to batch cost control.
+
+**Verification.** case-001 was annotated by the author against the evidence
+table under taxonomy v0.1 and found clean. The auditor returning zero on it
+does not verify anything, since the auditor is the system under evaluation.
+
+**Declared limitation of the panel.** Injected errors are the errors the author
+could construct. Sensitivity observed on this panel describes performance
+against deliberately injected errors of known type; it does not estimate
+sensitivity against the errors a generator produces spontaneously. These are
+different quantities and the second is the one that matters in a regulatory
+setting.
+
+## 2026-09-11 — Quote extent varies between runs
+
+The same summary (case-002) was audited twice with an unchanged script and
+prompt. Both runs returned one finding, correctly coded C4, with the same
+explanation. The cited span differed: "5.8%" in the first run, the full table
+row in the second. Output tokens 95 and 121.
+
+**Consequence for the protocol:** run-to-run variability appears not only in
+the verdict but in localisation. Comparing auditor output against human
+annotation requires a matching rule: does a partial quote that points to the
+correct span count as agreement, or is a minimum overlap required? Undecided.
+Kappa cannot be computed until it is.
