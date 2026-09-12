@@ -136,7 +136,7 @@ analysis; reference manifest inaccessible to the auditor.
 
 ### Provisional targets, conditional on code coverage
 
-C4 10 positives; C3 10; O1 10; C1 6; C2 6; negatives 12. Total 54.
+C4 10 positives, C3 10, O1 10, C1 6, C2 6, C5 6; 12 negatives. Total 60 (48 positives and 12 negatives).
 
 The smaller n for C1 and C2 reflects construction and judgement cost, not lower
 importance of those codes. O1 also requires judgement: removing text is
@@ -383,30 +383,20 @@ assembling a well-documented panel.
 
 **Selected candidates:**
 
-- **PARAGON-HF** (Solomon et al., NEJM 2019, NCT01920711) for the hierarchy
-  case. Primary outcome not significant; the article itself states that because
-  the primary did not meet the predetermined cutoff, secondary outcomes were
-  considered exploratory. The renal composite is nominally favourable with a
-  confidence interval excluding 1, and is among the secondary hypotheses
-  gated by the SAP rule. This is the required contrast: a nominally favourable
-  result whose confirmatory inference is blocked.
-
-- **EMPACT-MI** (Butler et al., NEJM 2024, NCT04509674) as a candidate for the
-  other codes. Primary outcome not significant with an explicit gatekeeping
-  rule, but all four key secondaries have intervals including 1, so it does not
-  isolate understanding of the hierarchy.
+- **PARAGON-HF** (Solomon et al., NEJM 2019, NCT01920711) remains a candidate for C5, subject to source verification and review of the generated summary.
+- **EMPACT-MI** (Butler et al., NEJM 2024, NCT04509674) remains a candidate for the panel and may also support C5 when the selected outcome's confirmatory testing is documented as blocked.
 
 Two further trials are needed, selected for diversity and document availability.
 
-### Criterion for a hierarchy target
+### Criterion for a C5 target
 
-A key secondary that is **nominally favourable by the reported measure of
-precision**, with the confirmatory block documented.
+An outcome whose confirmatory testing is blocked by the documented analysis plan. The case presents a point estimate, difference, ratio or per-arm outcome value, even when qualified as exploratory or unconfirmed.
 
-An explicit nominal p value is **not** required. Where the article reports none,
-the JSON records the p as not reported, per schema. Requiring one would exclude
-adequate trials on a reporting convention, and would invite computing a value
-and presenting it as though published.
+This is the project's presentation policy. Nominal favourability, a confidence interval excluding the null, and an explicit nominal p value are not selection requirements.
+
+Where the source does not report a p value, the JSON records it as not reported, per schema. A computed value must not be presented as though published.
+
+The final panel contains six C5 positives. Development cases, including case-004, are excluded from all final-panel denominators.
 
 ### Visibility
 
