@@ -88,3 +88,117 @@ reported per-arm HbA1c changes and the between-group difference for an outcome
 outside the sequence. It qualified the result, which satisfies Q2 and Q3, but
 the estimate should not have been given at all. Rule 2 was written after that
 output was produced and read; it is not a post-hoc reading of it.
+
+## Panel design — provisional, not frozen
+
+Numbers below are targets. None is frozen until the four source trials are
+selected and unambiguous cases of each code are confirmed constructible from
+them. Confirmation happens before any final-panel run, never after observing
+auditor performance.
+
+### Fixed now
+
+**Development cases excluded.** case-001, case-002 and case-003, and the
+synthetic trial they derive from, are development material. They enter no
+denominator.
+
+**Source material for the final panel.** Four published trials with full text
+and accessible supplements, selected to permit coverage of all five codes,
+including positive and negative results, a testing hierarchy, and sufficient
+safety data.
+
+For each trial: extract a JSON evidence table with every field traceable to
+page, table or section; verify denominators, follow-up periods, effect measures
+and multiplicity rules; generate summaries from the JSON and review them for
+conformity; inject errors into summaries only, never into the JSON.
+
+The auditor receives JSON plus summary. It assesses fidelity to the JSON.
+Human review verifies fidelity of the JSON to the article. Any information
+required to assess a code must be present in the JSON.
+
+**Correspondence rule.** A detection corresponds to the reference error when it
+carries the correct code and unambiguously locates the altered claim. Verbatim
+reproduction and identical punctuation are not required. For O1, it must
+identify the missing mandatory element and its reference evidence; quoting
+absent text is not required.
+
+Recorded separately: correct code; correct localisation or identification of
+the omission; combined correspondence.
+
+Also pre-specified: how additional flags, duplicates, and correct-discrepancy-
+wrong-code outcomes are treated.
+
+**Execution freeze, to be recorded before the final run.** Auditor prompt and
+taxonomy with versions and commit hash; exact API model identifier and run
+parameters; one run per case for the primary metric; a stability subset chosen
+in advance with three runs per case, the first remaining in the primary
+analysis; reference manifest inaccessible to the auditor.
+
+### Provisional targets, conditional on code coverage
+
+C4 10 positives; C3 10; O1 10; C1 6; C2 6; negatives 12. Total 54.
+
+The smaller n for C1 and C2 reflects construction and judgement cost, not lower
+importance of those codes. O1 also requires judgement: removing text is
+mechanical, but verifying that the removed information was mandatory and does
+not survive elsewhere in the summary is not.
+
+**Negatives are not negative by origin.** A generator output is a candidate
+negative. Each is reviewed against the JSON and the taxonomy before admission.
+Record how many outputs were rejected or corrected; corrected versions are
+identified as such.
+
+Each code is distributed across the four trials, and results are reported by
+trial as well as pooled.
+
+### Declared limitations of the panel
+
+**Dependence.** Four base texts increase diversity; they do not remove
+dependence between variants of the same text. Binomial intervals reported here
+assume independence and that assumption is violated by construction. Exact
+two-sided Clopper-Pearson lower bounds under perfect performance: 6/6 54.1%;
+10/10 69.2%; 12/12 73.5%. The panel is exploratory and was not sized to
+estimate sensitivity with precision.
+
+**Training contamination, direction unknown.** Published trials may appear in
+the model's training data. Removing names and titles does not guarantee
+removal of prior knowledge. This can bias detection in either direction: prior
+knowledge may make injected errors easier to detect, and it may also cause a
+summary faithful to the extracted JSON to be flagged where the JSON diverges
+from what the model recalls of the article, inflating false positives among the
+negatives.
+
+**Injected errors are not spontaneous errors.** Real source material does not
+make deliberately injected errors representative of what a generator produces
+unprompted.
+
+**Annotation time.** The 7-9 hour figure covers annotation only. It does not
+include trial selection, JSON extraction and verification, or resolution of
+ambiguities.
+
+### Kappa — design pending
+
+The correspondence rule does not by itself define a kappa. Kappa requires two
+raters classifying a fixed set of units into the same categories.
+
+Intended design: two independent raters judge correspondence of each auditor
+output, before resolution of disagreements. Kappa then measures agreement
+between human raters on the assessment of auditor outputs.
+
+**If only one rater is available, no inter-rater kappa is reported.**
+
+An auditor-versus-human kappa is possible in principle but is not adopted here.
+It would require fixing the unit set in advance — every verifiable claim in
+each summary, segmented per the protocol definition — and both raters assigning
+each unit to one of the five codes or to "no error". The auditor does not
+classify a fixed unit set; it emits findings freely, and converting free output
+into per-unit classification is itself a judgement. Recorded so that the absence
+of an auditor-human kappa reads as a decision rather than an omission.
+
+### Side effect worth recording
+
+Manual JSON extraction with traceability to page and table produces a
+gold-standard stage 0 output for each trial. Stage 0 is out of scope for the
+current design and is the stage the findings log identifies as the likely locus
+of risk. The extraction artefacts are therefore an input to a future stage 0
+evaluation, not only a means to this one.
