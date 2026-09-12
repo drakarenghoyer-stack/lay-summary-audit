@@ -1,28 +1,67 @@
 {
-  "panel_version": "0.1",
+  "panel_version": "0.2",
   "note": "Reference standard. Never provided to the auditor.",
   "cases": [
     {
       "id": "case-001",
       "file": "cases/case-001.md",
+      "panel_stage": "development",
       "label": "negative",
+      "base_text": "case-001",
       "source": "runs/lay-summary-inference.md, generator prompt v0.3, table examples/evidence-table-inference.json",
       "verification": "Annotated by KGH 2026-09-11 against evidence-table-inference.json under taxonomy v0.1. No finding. Sole annotator."
     },
     {
       "id": "case-002",
       "file": "cases/case-002.md",
+      "panel_stage": "development",
       "label": "positive",
-      "expected_code": "C4",
-      "paired_negative": "case-001",
+      "base_text": "case-001",
+      "target_code": "C4",
+      "injection_mode": "substitution",
+      "internal_contradiction": {
+        "present": false,
+        "span": null
+      },
+      "reference_evidence": {
+        "field": "adverse_events[1].intervention_pct",
+        "value": 4.8
+      },
       "edit": {
         "span": "hypoglycaemia row, intervention column of the adverse events table",
         "original": "4.8%",
         "altered": "5.8%",
         "downstream_consequences": "None. Single line altered (line 28), verified by diff."
       },
-      "evidence_in_table": "adverse_events[1].intervention_pct = 4.8",
-      "rationale": "Value appears once in the summary, carries no derived percentage or calculation, and the adjacent prose is qualitative and remains true after the edit."
+      "rationale": "Value appears once, carries no derived percentage or calculation, and the adjacent prose is qualitative and remains true after the edit."
+    },
+    {
+      "id": "case-003",
+      "file": "cases/case-003.md",
+      "panel_stage": "development",
+      "label": "positive",
+      "base_text": "case-001",
+      "target_code": "C4",
+      "injection_mode": "substitution",
+      "internal_contradiction": {
+        "present": true,
+        "span": "the adverse events table in the same summary shows 22.4% and 9.1%, which contradicts the altered prose"
+      },
+      "reference_evidence": {
+        "field": "adverse_events[0].intervention_pct and adverse_events[0].placebo_pct",
+        "value": "22.4 vs 9.1"
+      },
+      "edit": {
+        "span": "prose sentence on nausea frequency",
+        "original": "more often in people taking synthemide than in those taking placebo",
+        "altered": "more often in people taking placebo than in those taking synthemide",
+        "downstream_consequences": "None. Single line altered (31c31). The line is a two-sentence paragraph; only the nausea clause changed, the hypoglycaemia and pancreatitis sentence is byte-identical."
+      },
+      "rationale": "Direction inversion on the adverse event with the largest margin (22.4 vs 9.1), so the claim is unambiguously false rather than a matter of description. Tests whether a quantitative contradiction is detected when it appears in prose rather than in digits. Coded C4 under the operational definition, which turns on the content of the discrepancy and not on its format."
     }
+  ],
+  "open_questions": [
+    "Whether inserted content is easier to detect than substituted content. Recorded as a hypothesis; direction of bias not assumed.",
+    "Unit of independence for interval estimation: the case, or the base text. Ten variants of one summary are not ten independent observations."
   ]
 }
