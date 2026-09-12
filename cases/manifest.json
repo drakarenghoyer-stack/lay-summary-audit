@@ -1,0 +1,28 @@
+{
+  "panel_version": "0.1",
+  "note": "Reference standard. Never provided to the auditor.",
+  "cases": [
+    {
+      "id": "case-001",
+      "file": "cases/case-001.md",
+      "label": "negative",
+      "source": "runs/lay-summary-inference.md, generator prompt v0.3, table examples/evidence-table-inference.json",
+      "verification": "Annotated by KGH 2026-09-11 against evidence-table-inference.json under taxonomy v0.1. No finding. Sole annotator."
+    },
+    {
+      "id": "case-002",
+      "file": "cases/case-002.md",
+      "label": "positive",
+      "expected_code": "C4",
+      "paired_negative": "case-001",
+      "edit": {
+        "span": "hypoglycaemia row, intervention column of the adverse events table",
+        "original": "4.8%",
+        "altered": "5.8%",
+        "downstream_consequences": "None. Single line altered (line 28), verified by diff."
+      },
+      "evidence_in_table": "adverse_events[1].intervention_pct = 4.8",
+      "rationale": "Value appears once in the summary, carries no derived percentage or calculation, and the adjacent prose is qualitative and remains true after the edit."
+    }
+  ]
+}
