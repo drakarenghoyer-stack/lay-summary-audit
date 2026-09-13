@@ -5,10 +5,13 @@ from dotenv import load_dotenv
 from anthropic import Anthropic
 
 MODEL = "claude-sonnet-5"
-TABLE = "examples/evidence-table-inference.json"
+if len(sys.argv) < 3:
+    raise SystemExit("usage: audit.py <summary.md> <evidence-table.json>")
+TABLE = sys.argv[2]
 SUMMARY = sys.argv[1]
 PROMPT = "prompts/auditor.md"
-OUT = "runs/audit-" + pathlib.Path(sys.argv[1]).stem + ".json"
+STAMP = __import__("datetime").datetime.now().strftime("%Y%m%dT%H%M%S")
+OUT = "runs/audit-" + pathlib.Path(sys.argv[1]).stem + "-" + STAMP + ".json"
 
 print("=== " + SUMMARY + " ===")
 load_dotenv()
@@ -45,7 +48,41 @@ except json.JSONDecodeError as e:
     raise SystemExit(f"Auditor did not return valid JSON: {e}\nRaw saved to runs/audit-raw-failed.txt")
 
 pathlib.Path("runs").mkdir(exist_ok=True)
-pathlib.Path(OUT).write_text(json.dumps(findings, indent=2))
+CODES = {"C1", "C2", "C3", "C4", "C5", "O1"}
+problems = []
+if not isinstance(findings, dict) or "findings" not in findings:
+    problems.append("response is not an object with a 'findings' key")
+else:
+    for i, f in enumerate(findings.get("findings", [])):
+        if not isinstance(f, dict):
+            problems.append(f"finding {i} is not an object")
+            continue
+        if f.get("code") not in CODES:
+            problems.append(f"finding {i}: unknown code {f.get('code')!r}")
+        for k in ("quote", "explanation"):
+            if not f.get(k):
+                problems.append(f"finding {i}: missing {k}")
+
+record = {
+    "summary_file": SUMMARY,
+    "table_file": TABLE,
+    "prompt_file": PROMPT,
+    "model_requested": MODEL,
+    "model_returned": response.model,
+    "max_tokens": 4000,
+    "run_timestamp": STAMP,
+    "tokens_in": response.usage.input_tokens,
+    "tokens_out": response.usage.output_tokens,
+    "schema_problems": problems,
+    "raw": raw,
+    "parsed": findings,
+}
+pathlib.Path(OUT).write_text(json.dumps(record, indent=2))
+if problems:
+    print("SCHEMA PROBLEMS:")
+    for pr in problems:
+        print("  " + pr)
+
 
 for f in findings.get("findings", []):
     print(f"[{f.get('code')}] {f.get('explanation')}")
