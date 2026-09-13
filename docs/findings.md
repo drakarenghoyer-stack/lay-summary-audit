@@ -222,3 +222,41 @@ Output commit: b4cbbf1
 This exercises the project's presentation policy. It does not establish
 general performance or isolate understanding of gatekeeping.
 The case is excluded from all final-panel denominators.
+
+## 2026-09-13 — Auditor prompt v0.3: anticipatory clause removed, detection unchanged
+
+Auditor prompt v0.2 line 26 defined C5 and added: "Applies even when qualified
+as exploratory or unconfirmed." case-004 was constructed preserving the
+blocking caveats precisely to exercise that situation, so the prompt resolved
+in advance the ambiguity the case was built to test. Instruction and test
+coincided.
+
+The clause was removed (auditor v0.3). What remains is the code definition and
+the statement that this is the project's presentation policy, which is the same
+level of abstraction as generator rule 8: it states the principle without
+resolving the instance.
+
+**Result.** case-004 re-audited under v0.3: one finding, C5, correct
+localisation. Detection did not depend on the removed clause. Output under v0.2
+frozen at `runs/audit-case-004-auditorv02.json` before the change; v0.3 output
+at `runs/audit-case-004-auditorv03.json`. The original record was not replaced.
+
+**The diff is more informative than the verdict.** Under v0.2 the explanation
+read that the policy prohibits the estimate "regardless of qualifying
+language". Under v0.3 that clause is absent and the explanation reasons
+directly from the block to the reported estimate. The auditor was echoing the
+instruction; without it, the reasoning stands on the code definition alone.
+
+`table_reference` also changed, from free-text description to the structured
+path `outcomes[1].point_estimate`. Not requested by the change; more usable for
+annotation.
+
+**Consequence for the protocol.** A single sentence in the auditor prompt
+altered the content of the explanation while leaving the verdict intact. Freezing
+a prompt version number is insufficient; the frozen artefact is the prompt text,
+with its hash, and any change to it invalidates comparison with prior outputs.
+
+**Limits of this observation.** One case, one run per version. It does not
+establish that the clause never affects a verdict, only that it did not affect
+this one. Output tokens 477 under v0.2 and 457 under v0.3; the difference is not
+interpretable at n=1.
