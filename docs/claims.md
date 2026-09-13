@@ -32,6 +32,11 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 | trials.selected | published trials selected | 2 of 4 (PARAGON-HF, EMPACT-MI) |
 | model | model identifier in scripts | claude-sonnet-5 |
 
+| metrics.matching_rule | principal detection rule | correct target code and unequivocal localisation; supporting reference assessed separately |
+| taxonomy.c5_policy | C5 presentation policy | any effect estimate for an outcome outside the confirmatory testing sequence is C5, even when qualified; nominal favourability is not required |
+
+**Not mechanically checked.** The two entries above are rules, not values. They have no canonical string, so pattern matching over them would produce both false alarms and missed absences. They are recorded here for human reference and verified by reading.
+
 ## Documents that must agree
 
 Inside the repository, checked mechanically:
