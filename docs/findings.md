@@ -302,3 +302,41 @@ iteration even when the detector is trivial and the standard is tiny. The
 auditor has six codes and a planned panel of sixty cases. Budget for the same
 process there, and expect the first pass to contain instrument error rather than
 findings.
+
+## 2026-09-13 — Not every claim is mechanically checkable
+
+An attempt was made to add two entries to the claims register together with
+matching patterns in the checker: the principal correspondence rule, and the C5
+presentation policy.
+
+The script aborted on its own guard: the closing bracket of the FORBIDDEN list
+was no longer unambiguous, because that list had been edited twice by `sed`
+earlier the same day. **A file edited automatically became fragile to automated
+editing.** With fifteen entries, editing that list by script will be worse than
+opening it.
+
+**The substantive reason not to add the patterns.** The register holds discrete
+values: 6, 60, v0.3. Each has a canonical string and is lexically verifiable.
+The two new entries are rules stated in prose. They have no canonical form, and
+the proposed patterns tried to match paraphrases of a wrong rule, which is
+regex over meaning.
+
+One proposed pattern would have been near-missed by correct text already in the
+protocol: "Requiring a correct supporting reference as well would change it to
+evidence-supported detection." It escapes only on "as well". That is the same
+class of fragility that produced today's false positive, where the pattern
+flagged the line written to correct the error.
+
+The required patterns would have passed today because the author knew where the
+sentences were. A later rewrite of "correct code plus unambiguous localisation"
+into other words would raise an absence for a claim that is present.
+
+**Resolution.** Both entries are in the register, followed by an explicit note
+that they are not mechanically checked. The checker was left with the patterns
+calibrated earlier today.
+
+**The distinction, which only appeared by attempting it.** A claims register
+serves two functions: a single source for a human to consult, and input to a
+mechanical check. Only the second requires the value to be lexically verifiable.
+Forcing prose into the second degrades the instrument, and an instrument that
+raises false alarms is ignored within a few sessions.
