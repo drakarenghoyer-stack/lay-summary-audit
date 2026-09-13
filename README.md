@@ -37,7 +37,7 @@ The auditor is tuned for sensitivity over specificity. It is a screening test, n
 - **Commission** — the unit is the verifiable claim: a statement asserting something mappable to one or more fields of the evidence table. A sentence may contain several claims and is segmented accordingly.
 - **Omission** — the unit is the required element: each Annex V content item expected for that trial. Positive if absent or materially incomplete.
 
-**Metrics**, against a human-annotated reference standard: generator error rate per taxonomy code; auditor sensitivity and specificity, reported separately for commission and omission (primary); kappa against the human annotator, code by code; run-to-run stability under fixed input.
+**Metrics**, against a human-annotated reference standard: generator error rate per taxonomy code; auditor sensitivity and specificity, reported separately for commission and omission (primary); run-to-run stability under fixed input.
 
 The design is a diagnostic accuracy study in which the index test is an LLM and the target condition is an unsupported or missing claim.
 
@@ -106,3 +106,5 @@ Karen Guimaraes Hoyer, MD - linkedin.com/in/karenguimaraeshoyer
 ## License
 
 TO DECIDE. Suggested split: MIT for pipeline/, CC BY 4.0 for docs/ and prompts/.
+
+The final panel is designed and has not been executed. Development cases are excluded from every final-panel denominator.
