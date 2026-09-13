@@ -260,3 +260,45 @@ with its hash, and any change to it invalidates comparison with prior outputs.
 establish that the clause never affects a verdict, only that it did not affect
 this one. Output tokens 477 under v0.2 and 457 under v0.3; the difference is not
 interpretable at n=1.
+
+## 2026-09-13 — Claims register and consistency check
+
+Four documents asserted different states of the project at the same time. None
+was written in bad faith: each was correct when written and the project moved.
+The Portuguese briefing still said the architecture was implemented; the English
+brief v0.2 said nothing had been run, when stages 1 and 2 were running; the
+portfolio card carried "13-code taxonomy" and "not yet implemented" in adjacent
+paragraphs; the handbook contradicted itself across two sections.
+
+None of those four documents is in the repository, which is why nothing flagged
+them.
+
+**Response.** `docs/claims.md` holds every fact asserted in more than one
+document, with its current value. `pipeline/check_claims.py` checks the
+repository documents against it: forbidden patterns that contradict current
+values, and required patterns that must appear somewhere.
+
+**It checks consistency, not correctness.** If a value in the register is wrong
+and every document repeats it, the check passes.
+
+### Calibration of the check, recorded because it is the cheapest instance
+
+First run: six issues. Four were real stale claims, including "The 13-code
+taxonomy" on line 12 of the protocol, a document edited the same day. Two were
+instrument error:
+
+- **False positive.** The pattern matched a line whose purpose was to *correct*
+  the old count: "Documents describing it as five codes". Regex too broad; it
+  did not distinguish mention from use. Fixed with a lookbehind.
+- **False negative.** The required pattern for panel status was `not executed`.
+  The text added to the README read "has not been **been** executed". The
+  pattern was too narrow to match correct text. Fixed to `not (been )?executed`.
+
+A false positive and a false negative in the same trivial instrument, within
+fifteen minutes, against a reference standard of five lines.
+
+**Consequence.** Calibrating a detector against a reference standard requires
+iteration even when the detector is trivial and the standard is tiny. The
+auditor has six codes and a planned panel of sixty cases. Budget for the same
+process there, and expect the first pass to contain instrument error rather than
+findings.
