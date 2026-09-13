@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "code": "C5",
+      "quote": "The table shows that, on average, people taking synthemide had a 0.68-percentage-point larger decrease in HbA1c (a measure of average blood sugar levels) than people taking placebo.",
+      "table_reference": "outcomes[1].point_estimate",
+      "explanation": "This secondary outcome's confirmatory testing was blocked by the hierarchical analysis plan, yet a specific point estimate difference is still reported."
+    }
+  ]
+}
