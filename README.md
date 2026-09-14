@@ -108,3 +108,5 @@ Karen Guimaraes Hoyer, MD - linkedin.com/in/karenguimaraeshoyer
 TO DECIDE. Suggested split: MIT for pipeline/, CC BY 4.0 for docs/ and prompts/.
 
 The final panel is designed and has not been executed. Development cases are excluded from every final-panel denominator.
+
+Before running anything, read `docs/credentials.md`.
