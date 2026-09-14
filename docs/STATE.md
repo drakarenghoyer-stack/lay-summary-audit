@@ -23,9 +23,4 @@ two trials outstanding.
 2. audit.py and generate.py record prompt hash and HEAD commit.
 3. PARAGON-HF base summary, reviewed before admission as a negative.
 
-## Open
-Two logs exist outside the repository and are not versioned: terminal output
-from session 7 onward, and shell command history. Decide their status before
-moving anything into the repository.
-
 Read docs/credentials.md before any command.
