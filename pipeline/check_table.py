@@ -34,6 +34,14 @@ for o in table["outcomes"]:
     if ev_c not in o:
         continue
     a, c = o["events_intervention"], o[ev_c]
+    if o["effect_type"] != "risk_ratio":
+        print(o["rank"])
+        print(f"  declarado: {o['effect_type']} {o['point_estimate']} | "
+              f"IC {o['ci_95'][0]}-{o['ci_95'][1]} | p {o['p_value']}")
+        print(f"  NAO CALCULADO: a aproximacao por razao de riscos nao reconstroi "
+              f"{o['effect_type']}. Nenhum numero e impresso para nao ser citado.")
+        print()
+        continue
     rr = (a / n1) / (c / n2)
     se = math.sqrt(1/a - 1/n1 + 1/c - 1/n2)
     z = math.log(rr) / se
@@ -45,7 +53,4 @@ for o in table["outcomes"]:
     print(f"  calculado: RR {rr:.3f} | IC {lo:.2f}-{hi:.2f} | p {p:.3f}")
     print(f"  declarado: {o['effect_type']} {o['point_estimate']} | "
           f"IC {o['ci_95'][0]}-{o['ci_95'][1]} | p {o['p_value']}")
-    if o["effect_type"] != "risk_ratio":
-        print(f"  NOTA: efeito declarado e {o['effect_type']}; a aproximacao por "
-              f"razao de riscos nao o reconstroi. Divergencia aqui nao indica erro na tabela.")
     print()

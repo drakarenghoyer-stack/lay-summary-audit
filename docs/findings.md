@@ -340,3 +340,39 @@ serves two functions: a single source for a human to consult, and input to a
 mechanical check. Only the second requires the value to be lexically verifiable.
 Forcing prose into the second degrades the instrument, and an instrument that
 raises false alarms is ignored within a few sessions.
+
+## 2026-09-13 — An instrument outside its domain produces a plausible false finding
+
+`check_table.py` approximates an effect by computing a risk ratio from per-arm
+counts. Run against the PARAGON-HF evidence table, whose primary outcome is a
+rate ratio for recurrent events estimated by negative binomial regression, it
+produced:
+
+    computed: RR 0.879 | CI 0.82-0.94 | p < 0.001
+    declared: rate_ratio 0.87 | CI 0.75-1.01 | p 0.06
+
+The point estimate nearly matches. The interval and the p value do not: computed
+significance against declared non-significance.
+
+**Why.** The approximation treats 894 and 1009 as independent patients with an
+event. They are recurrent hospitalisations; the same patient contributes several
+times. This inflates the effective sample size and narrows the interval. The
+trial's model accounts for within-patient correlation, and its interval crosses
+1.
+
+**The failure mode is the dangerous one.** The output is internally consistent,
+arithmetically correct, and wrong. A reader without the caveat would conclude
+either that the publication is mistaken or that the table has a transcription
+error. A false finding that looks like a discovery.
+
+**Decision.** The script no longer computes anything when the declared effect
+type is not a risk ratio. It prints the declared values and a line stating that
+no number was computed. A printed number is a number someone will cite, and a
+caveat beside it does not prevent that.
+
+**Consequence for the project.** The same reasoning applies to the auditor.
+Sensitivity and specificity reported on this panel describe detection of
+injected errors of known type in this construction. Presenting them beside a
+caveat does not stop them being read as performance in a regulatory setting.
+Where a number cannot bear the reading it will receive, the question is whether
+to report it at all, not how to caveat it.
