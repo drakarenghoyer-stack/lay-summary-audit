@@ -54,3 +54,29 @@ for o in table["outcomes"]:
     print(f"  declarado: {o['effect_type']} {o['point_estimate']} | "
           f"IC {o['ci_95'][0]}-{o['ci_95'][1]} | p {o['p_value']}")
     print()
+
+ae = table.get("adverse_events")
+if ae and "events" in ae:
+    dens = ae.get("denominators", {})
+    default = dens.get("general", {})
+    print("eventos adversos: percentual contra denominador declarado")
+    problems = 0
+    for e in ae["events"]:
+        key = e.get("denominator", "general")
+        d = dens.get(key, default)
+        for arm in ("intervention", "comparator"):
+            n = e.get(arm + "_n")
+            pct = e.get(arm + "_pct")
+            den = d.get(arm)
+            if n is None or pct is None or not den:
+                continue
+            calc = n / den * 100
+            ok = abs(calc - pct) <= 0.05
+            if not ok:
+                problems += 1
+            flag = "   " if ok else " <-"
+            print(f"{flag} {e['term'][:42]:42s} {arm[:4]}: "
+                  f"{n}/{den} = {calc:.2f}% | declarado {pct}%")
+    print()
+    print(f"  {'OK' if not problems else str(problems) + ' DIVERGENCIA(S)'}: "
+          f"percentuais conferidos contra os denominadores declarados")

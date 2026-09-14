@@ -1,23 +1,52 @@
 {
   "trial_id": "PARAGON-HF",
+  "trial_name": "Prospective Comparison of ARNI with ARB Global Outcomes in HF with Preserved Ejection Fraction",
   "registration_id": "NCT01920711",
-  "condition": "heart failure with ejection fraction 45% or higher, NYHA class II to IV, elevated natriuretic peptides, structural heart disease",
+  "sponsor": "Novartis",
+  "primary_publication": {
+    "citation": "Solomon SD et al. Angiotensin-Neprilysin Inhibition in Heart Failure with Preserved Ejection Fraction. N Engl J Med 2019;381:1609-1620",
+    "doi": "10.1056/NEJMoa1908655",
+    "selection_criterion": "Reports the pre-specified primary outcome of the registered trial. Secondary publications and subgroup analyses are not the source for this table.",
+    "consulted": "2026-09-13"
+  },
+  "condition": "heart failure, NYHA class II to IV, left ventricular ejection fraction 45% or higher within the preceding 6 months, elevated natriuretic peptides, structural heart disease, prior diuretic use, age 50 years or older",
   "intervention": "sacubitril-valsartan, target dose 97 mg sacubitril with 103 mg valsartan twice daily",
   "comparator": "valsartan, target dose 160 mg twice daily",
   "design": "randomised, double-blind, active-comparator-controlled",
+  "trial_period": {
+    "recruitment_start": "2014-07-18",
+    "recruitment_end": "2016-12-16",
+    "study_close": "2019-04-30",
+    "source": {"document": "primary_publication", "location": "Results, Enrollment, Randomization, and Follow-up"}
+  },
+  "follow_up": {
+    "median_months": 35,
+    "iqr_months": [30, 41],
+    "note": "same in both treatment groups",
+    "source": {"document": "primary_publication", "location": "Results, Enrollment, Randomization, and Follow-up"}
+  },
+  "sites": 848,
+  "countries": 43,
+  "population": {
+    "randomised_total": 4822,
+    "randomised_intervention": 2419,
+    "randomised_comparator": 2403,
+    "excluded_post_randomisation": 26,
+    "exclusion_reason": "one site closed on 2017-06-27 for serious Good Clinical Practice violation; 12 patients in the sacubitril-valsartan arm and 14 in the valsartan arm excluded from all efficacy analyses",
+    "analysed_total": 4796,
+    "mean_age_years": "approximately 72.7 to 72.8",
+    "female_pct": "approximately 51.6 to 51.8",
+    "source": {"document": "primary_publication", "location": "Results, Enrollment, Randomization, and Follow-up; Figure 1"}
+  },
   "arms": [
-    { "name": "intervention", "n": 2407 },
-    { "name": "comparator", "n": 2389 }
+    {"name": "intervention", "n": 2407},
+    {"name": "comparator", "n": 2389}
   ],
   "statistical_analysis_plan": {
     "alpha_threshold_two_sided": 0.048,
     "alpha_note": "final two-sided threshold, adjusted for the interim analysis",
     "gatekeeping": "Secondary hypotheses are tested confirmatorily only if the primary hypothesis is rejected. The renal composite is among the gated secondary hypotheses.",
-    "source": {
-      "document": "PARAGON-HF statistical analysis plan",
-      "location": "section 9.3.2.1, pp. 35-36",
-      "consulted": "2026-09-11"
-    }
+    "source": {"document": "PARAGON-HF statistical analysis plan", "location": "section 9.3.2.1, pp. 35-36", "consulted": "2026-09-11"}
   },
   "outcomes": [
     {
@@ -31,11 +60,7 @@
       "point_estimate": 0.87,
       "ci_95": [0.75, 1.01],
       "p_value": 0.06,
-      "source": {
-        "document": "NEJM 2019, Solomon et al., Angiotensin-Neprilysin Inhibition in Heart Failure with Preserved Ejection Fraction",
-        "location": "Table 2",
-        "consulted": "2026-09-11"
-      }
+      "source": {"document": "primary_publication", "location": "Table 2"}
     },
     {
       "rank": "key_secondary",
@@ -48,11 +73,64 @@
       "point_estimate": 0.50,
       "ci_95": [0.33, 0.77],
       "p_value": "not reported",
-      "source": {
-        "document": "NEJM 2019, Solomon et al.",
-        "location": "Table 2",
-        "consulted": "2026-09-11"
-      }
+      "source": {"document": "primary_publication", "location": "Table 2"}
     }
-  ]
+  ],
+  "discontinuation": {
+    "study_drug_non_fatal_reasons": {
+      "intervention_n": 610, "intervention_pct": 25.3,
+      "comparator_n": 638, "comparator_pct": 26.7
+    },
+    "due_to_adverse_events": {
+      "intervention_n": 370, "intervention_pct": 15.4,
+      "comparator_n": 387, "comparator_pct": 16.2
+    },
+    "run_in_pre_randomisation": {
+      "valsartan_phase_discontinued": 541,
+      "valsartan_phase_due_to_ae": 340,
+      "sacubitril_valsartan_phase_discontinued": 384,
+      "sacubitril_valsartan_phase_due_to_ae": 262
+    },
+    "source": {"document": "primary_publication", "location": "Results, Safety"}
+  },
+  "adverse_events": {
+    "scope_declaration": "Table 3 of the primary publication reports ONLY the pre-specified adverse events of interest, selected for the known safety profile of angiotensin receptor-neprilysin inhibition. It is not a list of the most frequent adverse events. Overall adverse event and serious adverse event frequencies are in Supplementary Appendix Tables S5 and S6 and are NOT included in this table. A summary generated from this table cannot report overall adverse event frequency.",
+    "denominators": {
+      "general": {"intervention": 2407, "comparator": 2389,
+                  "applies_to": ["hypotension", "serum creatinine", "angioedema", "liver-related events"]},
+      "potassium": {"intervention": 2386, "comparator": 2367,
+                    "reason": "number of patients with an assessed potassium measurement"}
+    },
+    "events": [
+      {"term": "hypotension, systolic blood pressure below 100 mmHg",
+       "intervention_n": 380, "intervention_pct": 15.8,
+       "comparator_n": 257, "comparator_pct": 10.8},
+      {"term": "serum creatinine 2.0 mg/dl or higher",
+       "intervention_n": 261, "intervention_pct": 10.8,
+       "comparator_n": 328, "comparator_pct": 13.7},
+      {"term": "serum creatinine 2.5 mg/dl or higher",
+       "intervention_n": 97, "intervention_pct": 4.0,
+       "comparator_n": 109, "comparator_pct": 4.6},
+      {"term": "serum creatinine 3.0 mg/dl or higher",
+       "intervention_n": 38, "intervention_pct": 1.6,
+       "comparator_n": 40, "comparator_pct": 1.7},
+      {"term": "serum potassium above 5.5 mmol/litre",
+       "intervention_n": 316, "intervention_pct": 13.2,
+       "comparator_n": 361, "comparator_pct": 15.3,
+       "denominator": "potassium"},
+      {"term": "serum potassium above 6.0 mmol/litre",
+       "intervention_n": 75, "intervention_pct": 3.1,
+       "comparator_n": 101, "comparator_pct": 4.3,
+       "denominator": "potassium"},
+      {"term": "angioedema, adjudicated",
+       "intervention_n": 14, "intervention_pct": 0.6,
+       "comparator_n": 4, "comparator_pct": 0.2,
+       "note": "no patient had airway compromise"},
+      {"term": "liver-related adverse events",
+       "intervention_n": 151, "intervention_pct": 6.3,
+       "comparator_n": 178, "comparator_pct": 7.5}
+    ],
+    "source": {"document": "primary_publication", "location": "Methods, Trial Outcomes; Results, Safety; Table 3"}
+  },
+  "eligibility_source": {"document": "primary_publication", "location": "Methods, Trial Patients; Supplementary Appendix Table S1"}
 }
