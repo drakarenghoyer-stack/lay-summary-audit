@@ -16,7 +16,7 @@ instructions = pathlib.Path(PROMPT).read_text()
 
 response = client.messages.create(
     model=MODEL,
-    max_tokens=2000,
+    max_tokens=8000,
     system=instructions,
     messages=[
         {"role": "user", "content": json.dumps(table, indent=2)}
@@ -44,7 +44,7 @@ meta = {
                                      capture_output=True, text=True).stdout.strip()),
     "model_requested": MODEL,
     "model_returned": response.model,
-    "max_tokens": 2000,
+    "max_tokens": 8000,
     "run_timestamp": datetime.datetime.now().strftime("%Y%m%dT%H%M%S"),
     "tokens_in": response.usage.input_tokens,
     "tokens_out": response.usage.output_tokens,
