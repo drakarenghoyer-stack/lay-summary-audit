@@ -17,12 +17,19 @@ Development: four cases, excluded from every final denominator.
 Final: 60 planned, not executed. PARAGON-HF extracted, EMPACT-MI candidate,
 two trials outstanding.
 
-## Next three steps
-1. audit.py and generate.py record prompt content hash and HEAD commit at
-   execution time. generate.py currently records no metadata at all.
-2. PARAGON-HF base summary, reviewed before admission as a negative.
+## Next steps
+1. Review the PARAGON-HF base summary against its evidence table under
+   taxonomy v0.2, before admitting it as a panel negative. It is in
+   evidence/panel-candidates/ with full execution metadata.
+2. Select the two remaining trials.
+3. Build the trial x code coverage matrix.
 
-Done: development evidence moved to evidence/development/, versioned, with the
-provenance limitation declared in its README.
+Done: development evidence versioned in evidence/development/ with its
+provenance limitation declared. Both scripts now record prompt hash, table
+hash, HEAD commit and working tree state at execution time.
+
+Known gap: generate.py does not check stop_reason. The PARAGON-HF summary was
+silently truncated at max_tokens on the first attempt and only the token count
+revealed it.
 
 Read docs/credentials.md before any command.
