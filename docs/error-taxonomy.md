@@ -4,7 +4,7 @@ Derived from the sources pinned in `evaluation-protocol.md`. One reading of
 those sources, not an official classification of any authority.
 
 Codes are added only when a case has been observed or is specifically
-required by a source. Commission codes C1-C5 were derived from observed cases;
+required by a source. Commission codes C1-C6 were derived from observed cases;
 omission codes O2-O11 map one-to-one onto the ten Annex V elements. Remaining are
 to be derived from the Annex V elements and from annotation of real cases.
 

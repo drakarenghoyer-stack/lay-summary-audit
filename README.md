@@ -2,7 +2,7 @@
 
 A generator plus source-blinded, evidence-constrained auditor pipeline for lay summaries produced under EU CTR 536/2014, Annex V, with a defined protocol for measuring generator error rate and auditor accuracy.
 
-> **Status — stages 1 and 2 implemented, evaluation not started.** Architecture specified. Prompts written and versioned. Evaluation protocol with pinned normative sources and three annotation rules. Error taxonomy v0.3: 16 codes, 5 commission (C1-C5) and 11 omission (O1-O11), the latter derived one-to-one from the ten Annex V elements. Stages 1 and 2 run end to end on synthetic evidence tables. **The reference standard is not annotated, so no metric has been computed and no result is reported.** Observations to date are in `docs/findings.md`, each with the n at which it was made.
+> **Status — stages 1 and 2 implemented, evaluation not started.** Architecture specified. Prompts written and versioned. Evaluation protocol with pinned normative sources and four annotation rules. Error taxonomy v0.4: 17 codes, 6 commission (C1-C6) and 11 omission (O1-O11), the omission codes derived one-to-one from the ten Annex V elements. Stages 1 and 2 run end to end on synthetic evidence tables. **The reference standard is not annotated, so no metric has been computed and no result is reported.** Observations to date are in `docs/findings.md`, each with the n at which it was made.
 
 The deliverable of this project is not the pipeline. It is the quantitative characterisation of the pipeline. Until the reference standard exists, that characterisation does not.
 
