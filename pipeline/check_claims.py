@@ -2,7 +2,7 @@ import pathlib
 import re
 import sys
 
-DOCS = ["README.md", "docs/evaluation-protocol.md", "docs/error-taxonomy.md"]
+DOCS = ["README.md", "docs/evaluation-protocol.md", "docs/error-taxonomy.md", "docs/STATE.md"]
 
 # (rotulo, regex proibido, motivo)
 FORBIDDEN = [
