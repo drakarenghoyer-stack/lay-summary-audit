@@ -448,3 +448,32 @@ value"; this rule makes the per-arm clause explicit rather than inferred.
 composite — measured, qualified, no figures, referred to the scientific summary
 — is compliant under this rule, not over-restrictive. Rule 3 was written after
 reading that output and is declared as such.
+
+## Annotation rule 4 — adverse event frequency as natural frequency
+
+Annex V element 6 requires a description of adverse reactions and their
+frequency. Omission is not an option, so the question is form, not whether.
+
+GLSP v1 numeracy principles require whole numbers, consistent denominators, and
+that no calculation be left to the reader. An isolated percentage leaves the
+calculation pending: how many people is that, and how large is the difference.
+
+**Rule: adverse event frequency is reported as a natural frequency with an
+explicit denominator.** For example, about 16 in every 100 people who took the
+intervention, against about 11 in every 100 who took the comparator. A bare
+percentage, or a table of percentages without the denominator in words, is an
+error.
+
+**Distinction from rule 1.** Confidence intervals and p values are inferential
+apparatus: without them the reader loses no fact. An adverse event frequency is
+incidence, which is the fact itself. Explain-rather-than-display applies to the
+first, not the second.
+
+**Where denominators differ within a trial**, the denominator in use is stated
+in words at the point of use, not only in a footnote.
+
+**Consequence for the PARAGON-HF base summary.** Its adverse event table gives
+isolated percentages and is **not compliant** under this rule. Rule 4 was
+written after reading that output and is declared as such. The summary remains a
+panel candidate; its status is decided by scoring, not by the order in which the
+rule was written.
