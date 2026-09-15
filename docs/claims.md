@@ -41,6 +41,11 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 
 **Not mechanically checked.** The two entries above are rules, not values. They have no canonical string, so pattern matching over them would produce both false alarms and missed absences. They are recorded here for human reference and verified by reading.
 
+**Adding a value here does not make it checked.** Each entry that can be
+contradicted lexically needs a matching forbidden pattern in
+`pipeline/check_claims.py`. Changing a value means changing that pattern too.
+Nothing signals the omission.
+
 ## Documents that must agree
 
 Inside the repository, checked mechanically:
