@@ -376,3 +376,22 @@ injected errors of known type in this construction. Presenting them beside a
 caveat does not stop them being read as performance in a regulatory setting.
 Where a number cannot bear the reading it will receive, the question is whether
 to report it at all, not how to caveat it.
+
+## 2026-09-14 — The checker covers what someone remembered to list
+
+Three documents fell out of date without anything flagging it. The four
+external documents, because they are outside the repository. The claims
+register, because the checker compares documents against it and never it
+against reality. STATE.md, because it was not in the checker's DOCS list —
+the file that had just become the single source of state was not being checked.
+
+Each was a coverage gap, not a detection failure. The instrument works on what
+it is pointed at.
+
+**Consequence.** Adding a document to the project means adding it to DOCS.
+Adding a value to the register means adding a pattern that can contradict it.
+Neither happens automatically, and nothing signals the omission.
+
+This is the same class of limitation the auditor will have: a taxonomy scores
+what it enumerates. Codes not derived are errors not detected, and the panel
+cannot reveal them.
