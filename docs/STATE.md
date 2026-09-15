@@ -18,9 +18,11 @@ Final: 60 planned, not executed. PARAGON-HF extracted, EMPACT-MI candidate,
 two trials outstanding.
 
 ## Next three steps
-1. Versioned folder for panel evidence; move unversioned runs; declare the
-   provenance limitation for cases 001-003.
-2. audit.py and generate.py record prompt hash and HEAD commit.
-3. PARAGON-HF base summary, reviewed before admission as a negative.
+1. audit.py and generate.py record prompt content hash and HEAD commit at
+   execution time. generate.py currently records no metadata at all.
+2. PARAGON-HF base summary, reviewed before admission as a negative.
+
+Done: development evidence moved to evidence/development/, versioned, with the
+provenance limitation declared in its README.
 
 Read docs/credentials.md before any command.
