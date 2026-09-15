@@ -11,10 +11,10 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 
 | id | claim | current value |
 |---|---|---|
-| taxonomy.count | codes in the taxonomy | 6 |
-| taxonomy.codes | code identifiers | C1, C2, C3, C4, C5, O1 |
-| taxonomy.version | version of error-taxonomy.md | v0.2 |
-| taxonomy.intended | eventual intended count | ~13 |
+| taxonomy.count | codes in the taxonomy | 16 |
+| taxonomy.codes | code identifiers | C1-C5, O1-O11 |
+| taxonomy.version | version of error-taxonomy.md | v0.3 |
+| taxonomy.intended | eventual intended count | complete: 5 commission, 11 omission |
 | panel.total | cases in the final panel | 60 |
 | panel.positives | positives in the final panel | 48 |
 | panel.negatives | negatives in the final panel | 12 |

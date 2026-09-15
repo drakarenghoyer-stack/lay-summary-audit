@@ -6,8 +6,8 @@ DOCS = ["README.md", "docs/evaluation-protocol.md", "docs/error-taxonomy.md"]
 
 # (rotulo, regex proibido, motivo)
 FORBIDDEN = [
-    ("taxonomy.count", r"(?<!describing it as )\b(5|five) codes\b|\b13[- ]code taxonomy\b",
-     "taxonomy has 6 codes, intended ~13"),
+    ("taxonomy.count", r"(?<!describing it as )\b(5|six|5|6|five) codes\b|\b13[- ]code taxonomy\b|seis c[oó]digos",
+     "taxonomy has 16 codes: C1-C5, O1-O11"),
     ("panel.total", r"\b54 cases\b|\bTotal 54\b",
      "final panel is 60 cases"),
     ("stage1/2", r"pipeline is not yet implemented|has not been implemented|nothing has been run",

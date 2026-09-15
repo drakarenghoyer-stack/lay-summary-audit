@@ -103,7 +103,7 @@ synthetic trial they derive from, are development material. They enter no
 denominator.
 
 **Source material for the final panel.** Four published trials with full text
-and accessible supplements, selected to permit coverage of all six codes,
+and accessible supplements, selected to permit coverage of the commission codes,
 including positive and negative results, a testing hierarchy, and sufficient
 safety data.
 
@@ -190,7 +190,7 @@ between human raters on the assessment of auditor outputs.
 An auditor-versus-human kappa is possible in principle but is not adopted here.
 It would require fixing the unit set in advance — every verifiable claim in
 each summary, segmented per the protocol definition — and both raters assigning
-each unit to one of the six codes or to "no error". The auditor does not
+each unit to one of the taxonomy codes or to "no error". The auditor does not
 classify a fixed unit set; it emits findings freely, and converting free output
 into per-unit classification is itself a judgement. Recorded so that the absence
 of an auditor-human kappa reads as a decision rather than an omission.
