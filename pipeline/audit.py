@@ -67,6 +67,13 @@ record = {
     "summary_file": SUMMARY,
     "table_file": TABLE,
     "prompt_file": PROMPT,
+    "prompt_sha256": __import__("hashlib").sha256(instructions.encode()).hexdigest(),
+    "head_commit": __import__("subprocess").run(
+        ["git", "rev-parse", "HEAD"], capture_output=True, text=True
+    ).stdout.strip() or "unknown",
+    "git_dirty": bool(__import__("subprocess").run(
+        ["git", "status", "--porcelain"], capture_output=True, text=True
+    ).stdout.strip()),
     "model_requested": MODEL,
     "model_returned": response.model,
     "max_tokens": 4000,
