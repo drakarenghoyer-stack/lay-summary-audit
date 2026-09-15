@@ -1,0 +1,15 @@
+{
+  "output_file": "runs/lay-summary-paragon-hf.md",
+  "table_file": "examples/evidence-table-paragon-hf.json",
+  "prompt_file": "prompts/generator.md",
+  "prompt_sha256": "65fbdb0f9d6ba6a2f7d9212565d377050a69b4efd79580ad54f9bb22b0b8652d",
+  "table_sha256": "f58614df3db028902c9b1f2f3a0fc66e86611328b778bfba0d78f7204774f7ad",
+  "head_commit": "9c4abf503110cc1e180c99d73c55225aa3344264",
+  "git_dirty": false,
+  "model_requested": "claude-sonnet-5",
+  "model_returned": "claude-sonnet-5",
+  "max_tokens": 8000,
+  "run_timestamp": "20260914T215127",
+  "tokens_in": 3751,
+  "tokens_out": 2143
+}
