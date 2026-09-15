@@ -1,5 +1,5 @@
 {
-  "panel_version": "0.2",
+  "panel_version": "0.3",
   "note": "Reference standard. Never provided to the auditor.",
   "cases": [
     {
@@ -89,6 +89,72 @@
       "altered_string_occurrences": 1,
       "altered_string_unique": true,
       "rationale": "Correct effect magnitude presented for a blocked secondary. Qualifications do not remove C5 under the project policy."
+    },
+    {
+      "id": "paragon-hf-base",
+      "file": "evidence/panel-candidates/lay-summary-paragon-hf.md",
+      "metadata_file": "evidence/panel-candidates/lay-summary-paragon-hf.meta.json",
+      "panel_stage": "candidate",
+      "label": "not admitted",
+      "base_text": "paragon-hf-base",
+      "source": "generator prompt v0.3, table examples/evidence-table-paragon-hf.json, HEAD 9c4abf50, git_dirty false",
+      "annotation": {
+        "by": "KGH",
+        "date": "2026-09-14",
+        "taxonomy_version": "v0.4",
+        "blind": false,
+        "blind_note": "Non-blind. The annotator read this summary before rules 3 and 4 existed and before codes O2-O11 and C6 were derived; the omission list from that reading is what generated them. No timing figure is taken from this annotation.",
+        "findings": [
+          {
+            "code": "O2",
+            "element": "Annex V 1",
+            "note": "trial identification absent: no title, protocol number or registration identifier"
+          },
+          {
+            "code": "O3",
+            "element": "Annex V 2",
+            "note": "sponsor absent"
+          },
+          {
+            "code": "O4",
+            "element": "Annex V 3",
+            "note": "general information incomplete: sites, countries and trial period absent from the final version"
+          },
+          {
+            "code": "O5",
+            "element": "Annex V 4",
+            "note": "population incomplete: inclusion criteria reduced; natriuretic peptide, structural disease and prior diuretic criteria absent"
+          },
+          {
+            "code": "O11",
+            "element": "Annex V 10",
+            "note": "states that overall adverse event rates were unavailable but does not indicate where additional information can be found"
+          },
+          {
+            "code": "C6",
+            "element": "rule 4",
+            "note": "adverse event frequencies given as isolated percentages in a table, denominator not stated in words at the point of use"
+          }
+        ],
+        "not_scored": [
+          {
+            "code": "C5",
+            "note": "renal composite reported with no figures, qualified per rules 2 and 3; compliant"
+          },
+          {
+            "code": "O1",
+            "note": "uncertainty qualified for both the primary and the blocked secondary; Q1, Q2 and Q3 present"
+          },
+          {
+            "code": "C4",
+            "note": "potassium denominators applied correctly and the difference explained in words; no numeric contradiction found"
+          }
+        ],
+        "extraction_gaps": [
+          "Overall adverse event and serious adverse event frequencies are not in the evidence table; the source restricts Table 3 to pre-specified events. The summary states this. Not scored against the generator."
+        ]
+      },
+      "status": "Not admitted to the panel. Six findings under taxonomy v0.4; a negative must be clean."
     }
   ],
   "open_questions": [
