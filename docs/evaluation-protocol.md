@@ -418,3 +418,33 @@ the JSON.
 Meeting the profile does not guarantee an unambiguous injection. The final case
 depends on reviewing the generated summary text and confirming the alteration
 falls within the operational definition of C5.
+
+## Annotation rule 3 — no figures for a blocked outcome
+
+Rule 2 forbids an effect estimate for an outcome whose confirmatory testing is
+blocked. It left open whether raw per-arm counts for such an outcome are
+permitted.
+
+**Rule: they are not.** A blocked outcome is reported as measured, qualified per
+rule 2 (Q1, Q2, Q3), and with no figures of any kind: no effect estimate, no
+per-arm counts, no percentages.
+
+**Rationale.** The lay reader cannot interpret a raw count without the
+inferential frame the analysis plan withheld. Presenting it is presenting
+apparatus, not information, which is the same objection rule 1 makes to printing
+a confidence interval. What the reader needs is the conclusion: the outcome was
+measured, it was not formally tested, it supports no conclusion about benefit,
+and the full figures are in the scientific summary.
+
+**Scope.** This applies only to outcomes outside the confirmatory sequence.
+Counts for tested outcomes, for populations and for adverse events are required
+by Annex V and unaffected.
+
+**Consequence for the code.** Reporting any figure for a blocked outcome is C5.
+The code definition already reads "point estimate, difference, ratio or per-arm
+value"; this rule makes the per-arm clause explicit rather than inferred.
+
+**Consequence for the PARAGON-HF base summary.** Its handling of the renal
+composite — measured, qualified, no figures, referred to the scientific summary
+— is compliant under this rule, not over-restrictive. Rule 3 was written after
+reading that output and is declared as such.
