@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "code": "C4",
+      "quote": "Low blood sugar (hypoglycaemia) | 5.8% | 3.9%",
+      "table_reference": "adverse_events.hypoglycaemia.intervention_pct",
+      "explanation": "Table reports hypoglycaemia intervention percentage as 4.8%, not 5.8%."
+    }
+  ]
+}

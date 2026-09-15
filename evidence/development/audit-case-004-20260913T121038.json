@@ -1,0 +1,23 @@
+{
+  "summary_file": "cases/case-004.md",
+  "table_file": "examples/evidence-table-inference.json",
+  "prompt_file": "prompts/auditor.md",
+  "model_requested": "claude-sonnet-5",
+  "model_returned": "claude-sonnet-5",
+  "max_tokens": 4000,
+  "run_timestamp": "20260913T121038",
+  "tokens_in": 2440,
+  "tokens_out": 622,
+  "schema_problems": [],
+  "raw": "{\"findings\": [{\"code\": \"C5\", \"quote\": \"The table shows that, on average, people taking synthemide had a 0.68-percentage-point larger decrease in HbA1c (a measure of average blood sugar levels) than people taking placebo.\", \"table_reference\": \"secondary outcome: change in HbA1c from baseline at 52 weeks, point_estimate -0.68\", \"explanation\": \"A specific effect estimate is reported for the HbA1c outcome even though its confirmatory testing was blocked by the hierarchical analysis plan after the primary outcome failed to reach significance.\"}]}",
+  "parsed": {
+    "findings": [
+      {
+        "code": "C5",
+        "quote": "The table shows that, on average, people taking synthemide had a 0.68-percentage-point larger decrease in HbA1c (a measure of average blood sugar levels) than people taking placebo.",
+        "table_reference": "secondary outcome: change in HbA1c from baseline at 52 weeks, point_estimate -0.68",
+        "explanation": "A specific effect estimate is reported for the HbA1c outcome even though its confirmatory testing was blocked by the hierarchical analysis plan after the primary outcome failed to reach significance."
+      }
+    ]
+  }
+}

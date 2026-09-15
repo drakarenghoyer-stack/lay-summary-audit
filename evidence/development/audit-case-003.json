@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "code": "C4",
+      "quote": "Nausea was reported more often in people taking placebo than in those taking synthemide.",
+      "table_reference": "adverse_events: nausea (intervention_pct 22.4, placebo_pct 9.1)",
+      "explanation": "The table shows nausea was more common in the synthemide group (22.4%) than placebo (9.1%), but the summary reverses this direction."
+    }
+  ]
+}
