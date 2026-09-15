@@ -6,7 +6,7 @@ If this file and any other document disagree, check the repository.
 Stages 1 and 2. Stage 0 does not exist.
 
 ## Versions
-Taxonomy v0.3, sixteen codes: C1-C5 commission, O1-O11 omission.
+Taxonomy v0.4, seventeen codes: C1-C6 commission, O1-O11 omission.
 O2-O11 map one-to-one onto the ten Annex V elements; see docs/annexV-checklist.md.
 Generator prompt v0.3. Auditor prompt v0.3. Four annotation rules.
 

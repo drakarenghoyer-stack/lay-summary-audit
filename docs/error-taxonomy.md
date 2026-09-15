@@ -1,4 +1,4 @@
-# Error taxonomy — v0.3
+# Error taxonomy — v0.4
 
 Derived from the sources pinned in `evaluation-protocol.md`. One reading of
 those sources, not an official classification of any authority.
@@ -99,3 +99,11 @@ Source: Annex V element 10.
 Codes are scored against the generator only where the evidence table carries the
 information. A gap present in the table is an extraction gap and is recorded
 separately.
+
+**C6 — Frequency presented in a form that leaves a calculation to the reader.**
+Reports an adverse event frequency as a bare percentage, or as a table of
+percentages without the denominator stated in words at the point of use. The
+value may be correct against the evidence table; the form is the error.
+Distinct from C3, which concerns inferential apparatus. An adverse event
+frequency is incidence, not apparatus, and Annex V element 6 requires it.
+Source: GLSP v1 numeracy principles; Annex V element 6. See annotation rule 4.
