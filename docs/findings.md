@@ -395,3 +395,26 @@ Neither happens automatically, and nothing signals the omission.
 This is the same class of limitation the auditor will have: a taxonomy scores
 what it enumerates. Codes not derived are errors not detected, and the panel
 cannot reveal them.
+
+## 2026-09-14 — The generator failed on the first case scored against a fuller ruler
+
+Five consecutive runs produced no finding. The PARAGON-HF base summary, the
+first scored under taxonomy v0.4 with the Annex V checklist, produced six:
+O2, O3, O4, O5, O11 and C6.
+
+**The generator did not get worse.** The earlier taxonomy had five commission
+codes and one omission code, all concerned with fidelity to the evidence table.
+It could not score completeness of a mandatory element, because no code existed
+for one. As soon as codes existed for the ten Annex V elements, the first
+summary scored against them failed.
+
+**Consequence for the earlier observations.** The finding recorded as "with a
+well-structured evidence table, generation was faithful" describes fidelity, not
+compliance. Those five runs were never scored for mandatory-element
+completeness; they may well contain the same omissions. They are development
+cases and enter no denominator, so this is not an error in a reported result,
+but the earlier entries should be read as bounded by the taxonomy in force at
+the time.
+
+**The general form.** A taxonomy scores what it enumerates. A clean result is
+evidence about the instrument as much as about the object.
