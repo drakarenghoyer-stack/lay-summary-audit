@@ -51,3 +51,50 @@ Codes for the remaining Annex V elements (trial identification, sponsor,
 population, adverse reactions and frequency, comments on outcome, follow-up
 trials, where to find more information) are pending. Each requires deciding
 what counts as materially incomplete for that element.
+
+## Omission — unit: the required element
+
+The Annex V elements are listed in `annexV-checklist.md`. One code per element.
+O1 is retained with its existing meaning and is not an element code.
+
+**O2 — Trial identification absent or incomplete.**
+Title, protocol number, EU trial number or other identifiers missing.
+Source: Annex V element 1.
+
+**O3 — Sponsor absent.**
+Name or contact details of the sponsor missing.
+Source: Annex V element 2.
+
+**O4 — General information absent or incomplete.**
+Where or when the trial was conducted, the main objectives, or the explanation
+of the reasons for conducting it, missing.
+Source: Annex V element 3.
+
+**O5 — Population absent or incomplete.**
+Number of subjects, age group breakdown, gender breakdown, or inclusion and
+exclusion criteria, missing.
+Source: Annex V element 4.
+
+**O6 — Investigational medicinal products absent.**
+Source: Annex V element 5.
+
+**O7 — Adverse reactions or their frequency absent.**
+Source: Annex V element 6. Where the source carries only a pre-specified subset,
+a summary that states the limitation is not scored under O7; failing to state it
+is.
+
+**O8 — Overall results absent.**
+Source: Annex V element 7.
+
+**O9 — Comments on the outcome absent.**
+Source: Annex V element 8.
+
+**O10 — Follow-up trials not indicated.**
+Source: Annex V element 9.
+
+**O11 — Where to find additional information absent.**
+Source: Annex V element 10.
+
+Codes are scored against the generator only where the evidence table carries the
+information. A gap present in the table is an extraction gap and is recorded
+separately.
