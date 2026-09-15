@@ -33,6 +33,7 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 | extraction.complete | trials with complete extraction | 1 (PARAGON-HF) |
 | provenance.recorded | fields recorded at execution time | prompt hash, table hash, HEAD commit, working tree state |
 | evidence.location | where denominator-bearing output lives | evidence/, versioned; runs/ ignored for scratch |
+| annotation.rules | annotation rules in the protocol | 4 |
 | model | model identifier in scripts | claude-sonnet-5 |
 
 | metrics.matching_rule | principal detection rule | correct target code and unequivocal localisation; supporting reference assessed separately |
