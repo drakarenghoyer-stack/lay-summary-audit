@@ -477,3 +477,15 @@ isolated percentages and is **not compliant** under this rule. Rule 4 was
 written after reading that output and is declared as such. The summary remains a
 panel candidate; its status is decided by scoring, not by the order in which the
 rule was written.
+
+### Rule 3 — external convergence
+
+NEJM Evidence editorial policy states that in hierarchical testing procedures,
+p values should be reported only until the last comparison for which the p value
+was statistically significant, and that p values for the first non-significant
+comparison and for all comparisons thereafter should not be reported.
+
+This is an independent source reaching the same position as rule 3, applied to
+the scientific article rather than to the lay summary. It does not change the
+rule; it records that the position is not particular to this project.
+Consulted 2026-09-14.
