@@ -489,3 +489,37 @@ This is an independent source reaching the same position as rule 3, applied to
 the scientific article rather than to the lay summary. It does not change the
 rule; it records that the position is not particular to this project.
 Consulted 2026-09-14.
+
+
+## Source selection — second candidate confirmed
+
+**SELECT** (Lincoff et al., NEJM 2023;389:2221-32, DOI 10.1056/NEJMoa2307563).
+Semaglutide 2.4 mg weekly versus placebo in 17,604 patients with overweight or
+obesity and established cardiovascular disease, without diabetes.
+
+Primary MACE: 569/8,803 (6.5%) versus 701/8,801 (8.0%); HR 0.80, 95% CI
+0.72-0.90, P<0.001. **The primary was met.**
+
+**Why it is selected.** The hierarchy breaks downstream, not at the primary.
+Death from cardiovascular causes did not meet the required p value for
+hierarchical testing, and the article reports the two subsequent endpoints in
+the hierarchy as point estimates with 95% confidence intervals, stating that the
+interval widths are not adjusted for multiplicity and should not be used to
+infer definitive treatment effects.
+
+This gives C5 a second mechanism of blocking rather than a repetition of the
+first. In PARAGON-HF the sequence never starts; in SELECT it starts, succeeds,
+and then stops. A summary presenting a post-block endpoint as confirmed commits
+the same error by a different route.
+
+**Structural diversity.** Positive trial; time-to-first-event primary; 17,604
+patients against 4,796; different sponsor; endocrine population and indication.
+
+**Visibility.** SELECT is among the most discussed trials of 2023-24, with
+several secondary analyses published since. Prior exposure in training data is
+possible and is recorded as such, not established. This strengthens the case for
+selecting the two remaining trials with lower visibility.
+
+**Pending before extraction.** Locate the statistical analysis plan and confirm
+the exact hierarchy: which endpoint failed, its position, and which endpoints
+fall after it.

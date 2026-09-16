@@ -15,15 +15,17 @@ Nothing. No metric computed, no result reported.
 
 ## Panel
 Development: four cases, excluded from every final denominator.
-Final: 60 planned, not executed. PARAGON-HF extracted and a base summary
-generated; EMPACT-MI candidate; two trials outstanding.
+Final: 60 planned, not executed. PARAGON-HF extracted, base summary generated, annotated, not admitted.
+SELECT confirmed as second candidate: the hierarchy breaks downstream, not at
+the primary. Two trials outstanding, to be selected with lower visibility.
 
 ## Next steps
 1. Record the PARAGON-HF annotation under taxonomy v0.3 in the manifest, with
    the codes now applicable under rules 3 and 4. This is registration, not
    measurement: the annotator already knows where the omissions are, so it is
    declared non-blind and produces no timing figure.
-2. Select the second trial, extract its evidence table, generate a base summary.
+2. Locate the SELECT statistical analysis plan, confirm the hierarchy, extract
+   the evidence table, generate a base summary.
 3. Annotate that one with the Annex V checklist, timed. That is the figure that
    sizes the panel; the 35 minutes from the first reading included learning the
    task and had no checklist.
