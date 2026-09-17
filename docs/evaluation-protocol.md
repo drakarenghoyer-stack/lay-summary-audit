@@ -523,3 +523,11 @@ selecting the two remaining trials with lower visibility.
 **Pending before extraction.** Locate the statistical analysis plan and confirm
 the exact hierarchy: which endpoint failed, its position, and which endpoints
 fall after it.
+
+### O11 — scope of "where additional information can be found"
+
+A pointer to the scientific summary for a specific outcome does not discharge
+Annex V element 10. The element requires an indication of where additional
+information about the trial can be found, in general. A footer carrying the
+registration identifier and the primary publication satisfies it; a
+outcome-specific referral does not.
