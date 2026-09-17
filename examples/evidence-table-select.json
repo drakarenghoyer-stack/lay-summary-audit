@@ -1,0 +1,118 @@
+{
+  "trial_id": "SELECT",
+  "trial_name": "Semaglutide Effects on Cardiovascular Outcomes in People With Overweight or Obesity",
+  "sponsor": "Novo Nordisk",
+  "primary_publication": {
+    "citation": "Lincoff AM et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med 2023;389:2221-2232",
+    "doi": "10.1056/NEJMoa2307563",
+    "selection_criterion": "Reports the pre-specified primary outcome of the registered trial.",
+    "consulted": "2026-09-14"
+  },
+  "condition": "overweight or obesity with established cardiovascular disease, without diabetes; age 45 years or older, body-mass index 27 or greater",
+  "intervention": "semaglutide 2.4 mg once weekly, subcutaneous",
+  "comparator": "matching placebo once weekly, subcutaneous",
+  "design": "multicentre, double-blind, randomised, placebo-controlled, event-driven superiority trial",
+  "arms": [
+    { "name": "intervention", "n": 8803 },
+    { "name": "comparator", "n": 8801 }
+  ],
+  "statistical_analysis_plan": {
+    "design": "group-sequential, with a planned interim superiority analysis of the primary outcome at two thirds of the planned events (817 of 1225)",
+    "alpha_control": "overall one-sided type I error controlled at 2.5%, equivalent to 5% two-sided. A separate alpha-spending function was used for the confirmatory secondary endpoints (Lan-DeMets approach, per Glimm et al. 2010).",
+    "gatekeeping": "Confirmatory secondary endpoints are tested in a fixed hierarchical sequence after superiority on the primary. Testing stops at the first endpoint that fails to reach its nominal significance level; all subsequent endpoints in the sequence are not formally tested.",
+    "hierarchy": [
+      "death from cardiovascular causes",
+      "heart failure composite: death from cardiovascular causes, hospitalisation or urgent visit for heart failure",
+      "death from any cause"
+    ],
+    "nominal_threshold_position_1_two_sided": 0.023,
+    "threshold_note": "0.02314 in the statistical analysis plan. The value derives from alpha already spent across the sequential design and depends on the number of events accrued at final analysis; it is not 0.05.",
+    "source": { "document": "primary_publication and statistical analysis plan", "location": "Methods, Statistical Analysis", "consulted": "2026-09-14" }
+  },
+  "outcomes": [
+    {
+      "rank": "primary",
+      "measure": "first major adverse cardiovascular event: death from cardiovascular causes, non-fatal myocardial infarction, or non-fatal stroke, time to first event",
+      "effect_type": "hazard_ratio",
+      "patients_with_event_intervention": 569,
+      "patients_with_event_comparator": 701,
+      "pct_intervention": 6.5,
+      "pct_comparator": 8.0,
+      "point_estimate": 0.80,
+      "ci_95": [0.72, 0.90],
+      "p_value": "<0.001",
+      "source": { "document": "primary_publication", "location": "Table 2" }
+    },
+    {
+      "rank": "key_secondary",
+      "hierarchy_position": 1,
+      "measure": "death from cardiovascular causes",
+      "effect_type": "hazard_ratio",
+      "pct_intervention": 2.5,
+      "pct_comparator": 3.0,
+      "point_estimate": 0.85,
+      "ci_95": [0.71, 1.01],
+      "p_value": 0.07,
+      "outcome_of_test": "did not reach the nominal threshold of 0.023 required at this position; the hierarchical sequence stops here",
+      "source": { "document": "primary_publication", "location": "Table 2" }
+    },
+    {
+      "rank": "key_secondary",
+      "hierarchy_position": 2,
+      "measure": "heart failure composite: death from cardiovascular causes, hospitalisation or urgent visit for heart failure",
+      "effect_type": "hazard_ratio",
+      "point_estimate": 0.82,
+      "ci_95": [0.71, 0.96],
+      "p_value": "not tested",
+      "outcome_of_test": "falls after the failed endpoint in the sequence; no formal hypothesis test performed and no confirmatory p value assigned. Reported as point estimate and 95% confidence interval, not adjusted for multiplicity.",
+      "source": { "document": "primary_publication", "location": "Table 2" }
+    },
+    {
+      "rank": "key_secondary",
+      "hierarchy_position": 3,
+      "measure": "death from any cause",
+      "effect_type": "hazard_ratio",
+      "point_estimate": 0.81,
+      "ci_95": [0.71, 0.93],
+      "p_value": "not tested",
+      "outcome_of_test": "falls after the failed endpoint in the sequence; no formal hypothesis test performed and no confirmatory p value assigned. Reported as point estimate and 95% confidence interval, not adjusted for multiplicity.",
+      "source": { "document": "primary_publication", "location": "Table 2" }
+    }
+  ],
+  "adverse_events": {
+    "scope_declaration": "The trial used targeted safety data collection: serious adverse events, adverse events leading to permanent discontinuation, and pre-specified events of special interest were recorded systematically. This is not a complete record of all adverse events. A summary generated from this table cannot report overall adverse event frequency beyond these categories.",
+    "denominators": {
+      "general": { "intervention": 8803, "comparator": 8801 }
+    },
+    "p_value_note": "The source reports p values for adverse event comparisons. These are descriptive safety comparisons, not part of the confirmatory hierarchy.",
+    "events": [
+      { "term": "serious adverse events, any", "intervention_n": 2941, "intervention_pct": 33.4, "comparator_n": 3204, "comparator_pct": 36.4 },
+      { "term": "serious adverse events, cardiac disorders", "intervention_n": 1008, "intervention_pct": 11.5, "comparator_n": 1184, "comparator_pct": 13.5 },
+      { "term": "serious adverse events, infections and infestations", "intervention_n": 624, "intervention_pct": 7.1, "comparator_n": 738, "comparator_pct": 8.4 },
+      { "term": "serious adverse events, nervous system disorders", "intervention_n": 444, "intervention_pct": 5.0, "comparator_n": 496, "comparator_pct": 5.6 },
+      { "term": "serious adverse events, surgical and medical procedures", "intervention_n": 433, "intervention_pct": 4.9, "comparator_n": 548, "comparator_pct": 6.2 },
+      { "term": "serious adverse events, neoplasms", "intervention_n": 405, "intervention_pct": 4.6, "comparator_n": 402, "comparator_pct": 4.6 },
+      { "term": "serious adverse events, gastrointestinal disorders", "intervention_n": 342, "intervention_pct": 3.9, "comparator_n": 323, "comparator_pct": 3.7 },
+      { "term": "permanent discontinuation due to an adverse event, any", "intervention_n": 1461, "intervention_pct": 16.6, "comparator_n": 718, "comparator_pct": 8.2 },
+      { "term": "discontinuation due to gastrointestinal disorders", "intervention_n": 880, "intervention_pct": 10.0, "comparator_n": 172, "comparator_pct": 2.0 },
+      { "term": "discontinuation due to nervous system disorders", "intervention_n": 124, "intervention_pct": 1.4, "comparator_n": 92, "comparator_pct": 1.0 },
+      { "term": "discontinuation due to metabolism and nutrition disorders", "intervention_n": 108, "intervention_pct": 1.2, "comparator_n": 27, "comparator_pct": 0.3 },
+      { "term": "discontinuation due to general disorders and administration site conditions", "intervention_n": 105, "intervention_pct": 1.2, "comparator_n": 47, "comparator_pct": 0.5 },
+      { "term": "discontinuation due to neoplasms", "intervention_n": 80, "intervention_pct": 0.9, "comparator_n": 105, "comparator_pct": 1.2 },
+      { "term": "discontinuation due to infections and infestations", "intervention_n": 75, "intervention_pct": 0.9, "comparator_n": 84, "comparator_pct": 1.0 },
+      { "term": "COVID-19 related events, pre-specified interest", "intervention_n": 2108, "intervention_pct": 23.9, "comparator_n": 2150, "comparator_pct": 24.4 },
+      { "term": "malignant neoplasms, pre-specified interest", "intervention_n": 422, "intervention_pct": 4.8, "comparator_n": 418, "comparator_pct": 4.7 },
+      { "term": "gallbladder disorders, pre-specified interest", "intervention_n": 246, "intervention_pct": 2.8, "comparator_n": 203, "comparator_pct": 2.3 },
+      { "term": "acute kidney injury, pre-specified interest", "intervention_n": 171, "intervention_pct": 1.9, "comparator_n": 200, "comparator_pct": 2.3 },
+      { "term": "acute pancreatitis, adjudicated, pre-specified interest", "intervention_n": 17, "intervention_pct": 0.2, "comparator_n": 24, "comparator_pct": 0.3 }
+    ],
+    "source": { "document": "primary_publication", "location": "Safety table" }
+  },
+  "extraction_gaps": [
+    "registration_id not yet recorded",
+    "trial period, sites, countries not yet recorded",
+    "follow-up duration not yet recorded (article reports a mean of approximately 40 months; needs verification against the source)",
+    "population age and sex breakdown not yet recorded",
+    "full eligibility criteria not yet recorded"
+  ]
+}
