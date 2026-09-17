@@ -1,0 +1,15 @@
+{
+  "output_file": "runs/lay-summary-select.md",
+  "table_file": "examples/evidence-table-select.json",
+  "prompt_file": "prompts/generator.md",
+  "prompt_sha256": "65fbdb0f9d6ba6a2f7d9212565d377050a69b4efd79580ad54f9bb22b0b8652d",
+  "table_sha256": "cd0f8c93688b94edf9cf9545b1b90404f0ef3dfeca2db116031adeb6500f1c84",
+  "head_commit": "0364dfb057fdd56f46b550cdd3ee0182c8b7aa69",
+  "git_dirty": false,
+  "model_requested": "claude-sonnet-5",
+  "model_returned": "claude-sonnet-5",
+  "max_tokens": 8000,
+  "run_timestamp": "20260917T010835",
+  "tokens_in": 5170,
+  "tokens_out": 3323
+}

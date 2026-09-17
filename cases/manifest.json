@@ -155,6 +155,66 @@
         ]
       },
       "status": "Not admitted to the panel. Six findings under taxonomy v0.4; a negative must be clean."
+    },
+    {
+      "id": "select-base",
+      "file": "evidence/panel-candidates/lay-summary-select.md",
+      "metadata_file": "evidence/panel-candidates/lay-summary-select.meta.json",
+      "panel_stage": "candidate",
+      "label": "not admitted",
+      "base_text": "select-base",
+      "annotation": {
+        "by": "KGH",
+        "date": "2026-09-14",
+        "taxonomy_version": "v0.4",
+        "blind": false,
+        "blind_note": "Non-blind in the sense that the annotator knew the trial and had extracted the table. The summary itself had not been read before annotation, and no injected error was known. Timed: 8 minutes.",
+        "minutes": 8,
+        "findings": [
+          {
+            "code": "C6",
+            "element": "rule 4",
+            "note": "adverse event frequencies given as isolated percentages, denominator not stated in words at the point of use"
+          },
+          {
+            "code": "O11",
+            "element": "Annex V 10",
+            "note": "refers to the scientific summary for the untested outcomes but does not indicate where additional information about the trial can be found in general"
+          }
+        ],
+        "not_scored": [
+          {
+            "code": "C5",
+            "note": "no figure given for either blocked outcome; the sequence stop is explained. Compliant, and not resolvable from the confidence interval alone since both exclude 1"
+          },
+          {
+            "code": "C2",
+            "note": "the primary is described as reliable and the blocked outcomes are not; correct"
+          },
+          {
+            "code": "C3",
+            "note": "no interval, p value or test statistic printed; the 0.023 threshold is described in words, not given as a number"
+          },
+          {
+            "code": "C4",
+            "note": "percentages checked against declared denominators by check_table.py, 38 pairs, all within tolerance"
+          },
+          {
+            "code": "O1",
+            "note": "uncertainty qualified for the failed secondary and both blocked outcomes"
+          },
+          {
+            "code": "O2",
+            "note": "trial registration, EudraCT and sponsor present in a footer"
+          },
+          {
+            "code": "O3",
+            "note": "sponsor present"
+          }
+        ]
+      },
+      "status": "Not admitted. Two findings under taxonomy v0.4; a negative must be clean.",
+      "note": "Confirms that O2 and O3 in the PARAGON-HF summary were extraction gaps, not generator failures: here the table carried the identifiers and the generator used them."
     }
   ],
   "open_questions": [
