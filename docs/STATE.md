@@ -11,27 +11,24 @@ O2-O11 map one-to-one onto the ten Annex V elements; see docs/annexV-checklist.m
 Generator prompt v0.3. Auditor prompt v0.3. Four annotation rules.
 
 ## What has been measured
-Nothing. No metric computed, no result reported.
+No metric on the final panel; no result reported. Annotation cost measured:
+35 minutes on the first real case, 8 minutes on the second with the Annex V
+checklist. Planning figure 10 to 12 minutes per case, putting 60 cases at
+10 to 12 hours.
 
 ## Panel
 Development: four cases, excluded from every final denominator.
 Final: 60 planned, not executed. PARAGON-HF extracted, base summary generated, annotated, not admitted.
-SELECT confirmed as second candidate: the hierarchy breaks downstream, not at
-the primary. Two trials outstanding, to be selected with lower visibility.
+SELECT extracted, base summary generated and annotated in 8 minutes: two
+findings (C6, O11), not admitted. Its two blocked outcomes have intervals
+excluding 1, so C5 there is not resolvable from the interval alone. Two trials outstanding, to be selected with lower visibility.
 
 ## Next steps
-1. Record the PARAGON-HF annotation under taxonomy v0.3 in the manifest, with
-   the codes now applicable under rules 3 and 4. This is registration, not
-   measurement: the annotator already knows where the omissions are, so it is
-   declared non-blind and produces no timing figure.
-2. Locate the SELECT statistical analysis plan, confirm the hierarchy, extract
-   the evidence table, generate a base summary.
-3. Annotate that one with the Annex V checklist, timed. That is the figure that
-   sizes the panel; the 35 minutes from the first reading included learning the
-   task and had no checklist.
-4. Select the two remaining trials.
-5. Build the trial x code coverage matrix, commission codes only: omission codes
+1. Select the two remaining trials, with lower visibility than PARAGON-HF and
+   SELECT.
+2. Build the trial x code coverage matrix, commission codes only: omission codes
    are constructible in any trial by removal.
+3. Confirm the panel size against the measured annotation cost.
 
 ## Done
 Development evidence versioned in evidence/development/ with its provenance
