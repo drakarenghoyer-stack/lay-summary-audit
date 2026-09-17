@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 from anthropic import Anthropic
 
 MODEL = "claude-sonnet-5"
-TABLE = "examples/evidence-table-paragon-hf.json"
+TABLE = "examples/evidence-table-select.json"
 PROMPT = "prompts/generator.md"
-OUT = "runs/lay-summary-paragon-hf.md"
+OUT = "runs/lay-summary-select.md"
 
 load_dotenv()
 client = Anthropic()
