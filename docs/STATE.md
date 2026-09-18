@@ -43,11 +43,4 @@ it.
 The PARAGON-HF base summary gives adverse event frequencies as isolated
 percentages and is not compliant under rule 4.
 
-## Outside the repository, update at the end of the day
-caderno-projeto.pdf is behind: it does not carry C6, taxonomy v0.4, the
-PARAGON-HF annotation with its six findings, or the finding that the generator
-failed on the first case scored against a fuller taxonomy.
-technical-brief.pdf says sixteen codes; it is seventeen.
-karen-portfolio.html says 16 codes; it is 17.
-
 Read docs/credentials.md before any command.
