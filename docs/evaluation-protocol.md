@@ -638,3 +638,27 @@ responder definition that ACR20 dichotomises across seven components.
 gated on completion of the whole 4 mg sequence or on each endpoint in turn, and
 confirm what the article reports for SDAI at 4 mg and for all four endpoints at
 2 mg.
+
+### RA-BEACON — nominal p values are carried in the evidence table
+
+The 2 mg arm has p values below 0.05 on several outcomes, including ACR20 and
+HAQ-DI, sustained to week 24. These are nominal, not confirmatory: the
+hierarchical sequence stopped at SDAI in the 4 mg arm before the 2 mg
+comparisons were reached.
+
+**Decision: the evidence table carries these p values, each labelled nominal.**
+
+**Why.** A summary stating that both doses worked is not inventing a number here
+— it is reading a significant p value that exists in the article. This is the
+hardest case available to the auditor: nothing in the figure itself signals the
+distinction between nominally significant and confirmatorily demonstrated.
+
+In the other three trials a blocked outcome carries either no p value at all
+(PARAGON-HF, SELECT) or an interval excluding 1 with no p. Only here does a
+blocked comparison carry a declared significant p. Withholding those values from
+the table would let the table decide for the generator and would remove the one
+thing this trial tests that the others cannot.
+
+**Consequence for annotation.** Reporting a 2 mg effect as established is C5.
+Reporting it as measured, labelled nominal, and qualified per rules 2 and 3 is
+compliant. The distinction rests on the label, not on the number.
