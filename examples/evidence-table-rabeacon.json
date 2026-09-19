@@ -11,14 +11,33 @@
   "intervention": "baricitinib 2 mg or 4 mg once daily, oral",
   "comparator": "placebo",
   "design": "randomised, double-blind, placebo-controlled, three-arm, 24 weeks with primary assessment at week 12",
-  "trial_period": {"start": "2013-01", "recruitment_end": "2014-03", "completion": "2014-09"},
+  "trial_period": {
+    "start": "2013-01",
+    "recruitment_end": "2014-03",
+    "completion": "2014-09"
+  },
   "sites": 178,
   "countries": 24,
-  "follow_up": {"double_blind_weeks": 24, "primary_assessment_week": 12},
+  "follow_up": {
+    "double_blind_weeks": 24,
+    "primary_assessment_week": 12
+  },
   "arms": [
-    {"name": "comparator", "label": "placebo", "n": 176},
-    {"name": "intervention_2mg", "label": "baricitinib 2 mg", "n": 174},
-    {"name": "intervention_4mg", "label": "baricitinib 4 mg", "n": 177}
+    {
+      "name": "comparator",
+      "label": "placebo",
+      "n": 176
+    },
+    {
+      "name": "intervention_2mg",
+      "label": "baricitinib 2 mg",
+      "n": 174
+    },
+    {
+      "name": "intervention_4mg",
+      "label": "baricitinib 4 mg",
+      "n": 177
+    }
   ],
   "population": {
     "randomised_total": 527,
@@ -26,9 +45,27 @@
     "screen_failures": 432,
     "screen_failure_main_reason": "C-reactive protein below 3 mg/L",
     "by_arm": {
-      "comparator": {"n": 176, "mean_age": 56, "sd_age": 11, "female_n": 145, "female_pct": 82},
-      "intervention_2mg": {"n": 174, "mean_age": 55, "sd_age": 11, "female_n": 137, "female_pct": 79},
-      "intervention_4mg": {"n": 177, "mean_age": 56, "sd_age": 11, "female_n": 149, "female_pct": 84}
+      "comparator": {
+        "n": 176,
+        "mean_age": 56,
+        "sd_age": 11,
+        "female_n": 145,
+        "female_pct": 82
+      },
+      "intervention_2mg": {
+        "n": 174,
+        "mean_age": 55,
+        "sd_age": 11,
+        "female_n": 137,
+        "female_pct": 79
+      },
+      "intervention_4mg": {
+        "n": 177,
+        "mean_age": 56,
+        "sd_age": 11,
+        "female_n": 149,
+        "female_pct": 84
+      }
     }
   },
   "eligibility": {
@@ -46,78 +83,235 @@
   },
   "statistical_analysis_plan": {
     "gatekeeping": "Endpoints tested hierarchically at week 12 to control type I error. Sequence: ACR20, HAQ-DI, DAS28-CRP, SDAI 3.3 or less. Comparisons were made first with the 4 mg dose and then with the 2 mg dose.",
-    "hierarchy": ["ACR20", "HAQ-DI", "DAS28-CRP", "SDAI 3.3 or less"],
-    "dose_order": ["4 mg", "2 mg"],
+    "hierarchy": [
+      "ACR20",
+      "HAQ-DI",
+      "DAS28-CRP",
+      "SDAI 3.3 or less"
+    ],
+    "dose_order": [
+      "4 mg",
+      "2 mg"
+    ],
     "outcome_of_sequence": "The 4 mg comparisons reached significance for ACR20, HAQ-DI and DAS28-CRP. SDAI 3.3 or less did not (p = 0.14). The sequence stopped there, and all 2 mg comparisons, which follow completion of the 4 mg sequence, were never reached. Every 2 mg value below is nominal.",
     "imputation": "Patients who received rescue therapy (baricitinib 4 mg) or discontinued the study or study treatment were classified as not having a response. For those patients the last observations before rescue or discontinuation were used at subsequent time points.",
-    "source": {"document": "primary_publication", "location": "Methods, Statistical Analysis"}
+    "source": {
+      "document": "primary_publication",
+      "location": "Methods, Statistical Analysis"
+    }
   },
   "outcomes": [
     {
-      "rank": "primary", "hierarchy_position": 1, "week": 12,
+      "rank": "primary",
+      "hierarchy_position": 1,
+      "week": 12,
       "measure": "ACR20 response",
       "effect_type": "responder_proportion",
       "responder_definition": "at least 20% improvement in the American College of Rheumatology criteria, a seven-component composite",
       "pct_comparator": 27,
-      "pct_intervention_4mg": 55, "p_4mg": "<0.001", "status_4mg": "confirmatory, met",
-      "pct_intervention_2mg": 49, "p_2mg": "<0.001", "status_2mg": "NOMINAL ONLY: the sequence stopped before the 2 mg comparisons were reached",
-      "source": {"document": "primary_publication", "location": "Table 2"}
+      "pct_intervention_4mg": 55,
+      "p_4mg": "<0.001",
+      "status_4mg": "confirmatory, met",
+      "pct_intervention_2mg": 49,
+      "p_2mg": "<0.001",
+      "status_2mg": "NOMINAL ONLY: the sequence stopped before the 2 mg comparisons were reached",
+      "source": {
+        "document": "primary_publication",
+        "location": "Table 2"
+      }
     },
     {
-      "rank": "key_secondary", "hierarchy_position": 2, "week": 12,
+      "rank": "key_secondary",
+      "hierarchy_position": 2,
+      "week": 12,
       "measure": "HAQ-DI, least-squares mean change from baseline",
       "effect_type": "continuous_change",
       "ls_mean_change_comparator": -0.17,
-      "ls_mean_change_4mg": -0.40, "status_4mg": "confirmatory, met (p < 0.001)",
-      "ls_mean_change_2mg": -0.38, "status_2mg": "NOMINAL ONLY",
-      "baseline_comparator": 1.78, "baseline_2mg": 1.71, "baseline_4mg": 1.74,
-      "source": {"document": "primary_publication", "location": "Table 2"}
+      "ls_mean_change_4mg": -0.4,
+      "status_4mg": "confirmatory, met (p < 0.001)",
+      "ls_mean_change_2mg": -0.38,
+      "status_2mg": "NOMINAL ONLY",
+      "baseline_comparator": 1.78,
+      "baseline_2mg": 1.71,
+      "baseline_4mg": 1.74,
+      "source": {
+        "document": "primary_publication",
+        "location": "Table 2"
+      }
     },
     {
-      "rank": "key_secondary", "hierarchy_position": 3, "week": 12,
+      "rank": "key_secondary",
+      "hierarchy_position": 3,
+      "week": 12,
       "measure": "DAS28-CRP, least-squares mean change from baseline",
       "effect_type": "continuous_change",
       "ls_mean_change_comparator": -0.81,
-      "ls_mean_change_4mg": -1.71, "status_4mg": "confirmatory, met (p < 0.001)",
-      "ls_mean_change_2mg": -1.51, "status_2mg": "NOMINAL ONLY",
-      "baseline_comparator": 5.9, "baseline_2mg": 6.0, "baseline_4mg": 5.9,
-      "source": {"document": "primary_publication", "location": "Table 2"}
+      "ls_mean_change_4mg": -1.71,
+      "status_4mg": "confirmatory, met (p < 0.001)",
+      "ls_mean_change_2mg": -1.51,
+      "status_2mg": "NOMINAL ONLY",
+      "baseline_comparator": 5.9,
+      "baseline_2mg": 6.0,
+      "baseline_4mg": 5.9,
+      "source": {
+        "document": "primary_publication",
+        "location": "Table 2"
+      }
     },
     {
-      "rank": "key_secondary", "hierarchy_position": 4, "week": 12,
+      "rank": "key_secondary",
+      "hierarchy_position": 4,
+      "week": 12,
       "measure": "SDAI 3.3 or less, remission",
       "effect_type": "responder_proportion",
       "pct_comparator": 2,
-      "pct_intervention_4mg": 9, "p_4mg": 0.14,
+      "pct_intervention_4mg": 9,
+      "p_4mg": 0.14,
       "status_4mg": "confirmatory, NOT met. This is where the sequence stops.",
       "status_2mg": "never reached",
-      "source": {"document": "primary_publication", "location": "Table 2"}
+      "source": {
+        "document": "primary_publication",
+        "location": "Table 2"
+      }
     }
   ],
   "adverse_events": {
     "scope_declaration": "Counts are by treatment arm over two windows, weeks 0-12 and 0-24. Individual adverse event terms are not included in this table.",
-    "denominators": {"general": {"comparator": 176, "intervention_2mg": 174, "intervention_4mg": 177}},
-    "unresolved": "Any adverse event, weeks 0-24, 4 mg: 137/177 = 77.4%, printed as 78% in the source. No standard convention rounds 77.40 to 78. The safety population denominator may differ from the randomised n; not confirmed. Recorded as printed and left unresolved.",
+    "denominators": {
+      "general": {
+        "comparator": 176,
+        "intervention_2mg": 174,
+        "intervention_4mg": 177
+      }
+    },
+    "unresolved": "Any adverse event, weeks 0-24, 4 mg: the source prints 137 (78%). 137/177 = 77.40%, which does not round to 78 under any standard convention. The table footnote defines the safety population as all randomised patients who received at least one dose, N = 177, and the article does not describe a different denominator for this row. A denominator of 176 would give 77.84% and round to 78%, but nothing in the source supports it. Recorded as printed. The divergence is preserved, not resolved.",
     "exposure_patient_years": {
-      "comparator": {"weeks_0_12": 38.6, "weeks_0_24": 69.9},
-      "intervention_2mg": {"weeks_0_12": 38.4, "weeks_0_24": 65.8},
-      "intervention_4mg": {"weeks_0_12": 40.0, "weeks_0_24": 73.3}
+      "comparator": {
+        "weeks_0_12": 38.6,
+        "weeks_0_24": 69.9
+      },
+      "intervention_2mg": {
+        "weeks_0_12": 38.4,
+        "weeks_0_24": 65.8
+      },
+      "intervention_4mg": {
+        "weeks_0_12": 40.0,
+        "weeks_0_24": 73.3
+      }
     },
     "events": [
-      {"term": "any adverse event, weeks 0-12", "comparator_n": 96, "comparator_pct": 55, "intervention_2mg_n": 107, "intervention_2mg_pct": 61, "intervention_4mg_n": 119, "intervention_4mg_pct": 67},
-      {"term": "any adverse event, weeks 0-24", "comparator_n": 112, "comparator_pct": 64, "intervention_2mg_n": 123, "intervention_2mg_pct": 71, "intervention_4mg_n": 137, "intervention_4mg_pct": 78},
-      {"term": "serious adverse event, weeks 0-12", "comparator_n": 7, "comparator_pct": 4, "intervention_2mg_n": 3, "intervention_2mg_pct": 2, "intervention_4mg_n": 11, "intervention_4mg_pct": 6},
-      {"term": "serious adverse event, weeks 0-24", "comparator_n": 13, "comparator_pct": 7, "intervention_2mg_n": 7, "intervention_2mg_pct": 4, "intervention_4mg_n": 18, "intervention_4mg_pct": 10},
-      {"term": "discontinuation due to an adverse event, to week 24", "comparator_n": 7, "comparator_pct": 4, "intervention_2mg_n": 7, "intervention_2mg_pct": 4, "intervention_4mg_n": 11, "intervention_4mg_pct": 6},
-      {"term": "adjudicated major adverse cardiovascular event, to week 24", "comparator_n": 0, "comparator_pct": 0, "intervention_2mg_n": 0, "intervention_2mg_pct": 0, "intervention_4mg_n": 2, "intervention_4mg_pct": 1},
-      {"term": "death", "comparator_n": 0, "comparator_pct": 0, "intervention_2mg_n": 0, "intervention_2mg_pct": 0, "intervention_4mg_n": 1, "intervention_4mg_pct": 1, "note": "basilar artery thrombosis on day 47"},
-      {"term": "gastrointestinal perforation", "comparator_n": 0, "comparator_pct": 0, "intervention_2mg_n": 0, "intervention_2mg_pct": 0, "intervention_4mg_n": 0, "intervention_4mg_pct": 0}
+      {
+        "term": "any adverse event, weeks 0-12",
+        "comparator_n": 96,
+        "comparator_pct": 55,
+        "intervention_2mg_n": 107,
+        "intervention_2mg_pct": 61,
+        "intervention_4mg_n": 119,
+        "intervention_4mg_pct": 67
+      },
+      {
+        "term": "any adverse event, weeks 0-24",
+        "comparator_n": 112,
+        "comparator_pct": 64,
+        "intervention_2mg_n": 123,
+        "intervention_2mg_pct": 71,
+        "intervention_4mg_n": 137,
+        "intervention_4mg_pct": 78
+      },
+      {
+        "term": "serious adverse event, weeks 0-12",
+        "comparator_n": 7,
+        "comparator_pct": 4,
+        "intervention_2mg_n": 3,
+        "intervention_2mg_pct": 2,
+        "intervention_4mg_n": 11,
+        "intervention_4mg_pct": 6
+      },
+      {
+        "term": "serious adverse event, weeks 0-24",
+        "comparator_n": 13,
+        "comparator_pct": 7,
+        "intervention_2mg_n": 7,
+        "intervention_2mg_pct": 4,
+        "intervention_4mg_n": 18,
+        "intervention_4mg_pct": 10
+      },
+      {
+        "term": "discontinuation due to an adverse event, to week 24",
+        "comparator_n": 7,
+        "comparator_pct": 4,
+        "intervention_2mg_n": 7,
+        "intervention_2mg_pct": 4,
+        "intervention_4mg_n": 11,
+        "intervention_4mg_pct": 6
+      },
+      {
+        "term": "adjudicated major adverse cardiovascular event, to week 24",
+        "comparator_n": 0,
+        "comparator_pct": 0,
+        "intervention_2mg_n": 0,
+        "intervention_2mg_pct": 0,
+        "intervention_4mg_n": 2,
+        "intervention_4mg_pct": 1
+      },
+      {
+        "term": "death",
+        "comparator_n": 0,
+        "comparator_pct": 0,
+        "intervention_2mg_n": 0,
+        "intervention_2mg_pct": 0,
+        "intervention_4mg_n": 1,
+        "intervention_4mg_pct": 1,
+        "note": "basilar artery thrombosis on day 47"
+      },
+      {
+        "term": "gastrointestinal perforation",
+        "comparator_n": 0,
+        "comparator_pct": 0,
+        "intervention_2mg_n": 0,
+        "intervention_2mg_pct": 0,
+        "intervention_4mg_n": 0,
+        "intervention_4mg_pct": 0
+      }
     ],
-    "source": {"document": "primary_publication", "location": "Safety table"}
+    "source": {
+      "document": "primary_publication",
+      "location": "Safety table"
+    },
+    "annotation_note": "This row is a potential C4 in the reference standard itself. A summary writing 77% is correct by arithmetic and divergent from the source; writing 78% is faithful to the source and wrong by arithmetic. Which counts as an error is a protocol decision, to be taken with the divergence visible rather than explained away in advance."
   },
   "discontinuation": {
-    "comparator": {"n": 31, "pct": 18, "reasons": {"lack of efficacy": 15, "adverse event": 7, "patient withdrawal": 7, "protocol violation": 1, "physician decision": 1}},
-    "intervention_2mg": {"n": 17, "pct": 10, "reasons": {"adverse event": 7, "patient withdrawal": 6, "lack of efficacy": 4}},
-    "intervention_4mg": {"n": 18, "pct": 10, "reasons": {"adverse event": 10, "lack of efficacy": 3, "physician decision": 2, "death": 1, "lost to follow-up": 1, "patient withdrawal": 1}}
+    "comparator": {
+      "n": 31,
+      "pct": 18,
+      "reasons": {
+        "lack of efficacy": 15,
+        "adverse event": 7,
+        "patient withdrawal": 7,
+        "protocol violation": 1,
+        "physician decision": 1
+      }
+    },
+    "intervention_2mg": {
+      "n": 17,
+      "pct": 10,
+      "reasons": {
+        "adverse event": 7,
+        "patient withdrawal": 6,
+        "lack of efficacy": 4
+      }
+    },
+    "intervention_4mg": {
+      "n": 18,
+      "pct": 10,
+      "reasons": {
+        "adverse event": 10,
+        "lack of efficacy": 3,
+        "physician decision": 2,
+        "death": 1,
+        "lost to follow-up": 1,
+        "patient withdrawal": 1
+      }
+    }
   }
 }
