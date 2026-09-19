@@ -576,3 +576,33 @@ repeats per dose (RA-BEACON).
 structure across doses in NCT02389816, and for RA-BEACON whether the week-12
 hierarchy held through all four endpoints at each dose, and what the article
 reports for any endpoint falling after a failure.
+
+### NCT02389816 — multiplicity confirmed: Holm, exercised and passed
+
+The SAP controls multiplicity between the 10 mg and 20 mg doses on the primary
+outcome by the Holm procedure, two-sided, overall type I error below 5%:
+
+  Step 1. Order the two p values. If the smaller exceeds 0.025, testing stops
+  and both null hypotheses are retained.
+  Step 2. If the smaller is at or below 0.025, reject it and test the larger
+  against 0.05.
+
+Both doses passed: 20 mg p = 0.0023, 10 mg p = 0.0080. The procedure ran to
+completion and both hypotheses were rejected. **The trial therefore describes a
+blocking mechanism without exercising it**, and is not a source of C5.
+
+**What it tests instead, and why it is structurally distinct.** In PARAGON-HF
+and SELECT the sequence is fixed in the SAP before the data. In Holm the order
+is determined by the observed p values: the better-performing dose is tested
+first, whichever it turns out to be. A summary stating that the 20 mg dose was
+tested first is factually correct and methodologically wrong if it presents that
+order as pre-specified. This is an error no current code covers, and a code for
+it is expected to follow from annotating this trial.
+
+**Secondary outcomes.** The SAP makes no further adjustment for multiplicity on
+the secondary outcomes. This is the SAGE-217 situation and falls under rule 3:
+unadjusted intervals do not support confirmatory inference. It is not formal
+blocking but absence of control, and the two are not the same situation. Whether
+a summary presenting such a secondary as established is C2 or C5 is to be
+decided before annotation, since the four trials now present three distinct
+situations: sequence never started, sequence interrupted, and no adjustment.

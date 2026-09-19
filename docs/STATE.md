@@ -24,6 +24,8 @@ findings (C6, O11), not admitted. Its two blocked outcomes have intervals
 excluding 1, so C5 there is not resolvable from the interval alone. Third and fourth trials selected: NCT02389816 (vortioxetine, continuous MADRS,
 three arms) and RA-BEACON (baricitinib, hierarchy across four endpoints and two
 doses, responder plus continuous). Neither extracted yet.
+NCT02389816 uses Holm between doses; both passed, so it describes a blocking
+mechanism without exercising it. It is not a source of C5.
 
 ## Next steps
 1. Confirm the SAP for each new trial, then extract both evidence tables.
