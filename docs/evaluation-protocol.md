@@ -531,3 +531,48 @@ Annex V element 10. The element requires an indication of where additional
 information about the trial can be found, in general. A footer carrying the
 registration identifier and the primary publication satisfies it; a
 outcome-specific referral does not.
+
+## Source selection — third and fourth candidates confirmed
+
+**Vortioxetine phase 3, NCT02389816** (Lu AA21004/CCT-004). Major depressive
+disorder, 8 weeks, three arms: placebo, 10 mg, 20 mg, approximately 164 per arm.
+Primary: change from baseline in MADRS total score at week 8, analysed by mixed
+models for repeated measures. Results posted with least-squares means, standard
+errors, confidence intervals and p values. Protocol and statistical analysis
+plan are hosted publicly at cdn.clinicaltrials.gov/large-docs/16/NCT02389816/.
+
+What it adds: a continuous primary outcome, a three-arm design, and a small
+sample. The three trials already selected all have two arms. The power
+calculation cites a two-sided level of 0.025, which implies multiplicity control
+across the two doses; the exact structure is to be confirmed from the SAP.
+
+**RA-BEACON, baricitinib in refractory rheumatoid arthritis** (NEJM,
+DOI 10.1056/NEJMoa1507247). 527 patients with inadequate response to one or more
+TNF inhibitors or other biologic DMARDs, randomised 1:1:1 to baricitinib 2 mg,
+4 mg or placebo for 24 weeks. Endpoints tested hierarchically at week 12:
+ACR20 response (primary), HAQ-DI score, DAS28-CRP, and SDAI of 3.3 or less.
+Comparisons with placebo were made first with the 4 mg dose and then with 2 mg.
+
+What it adds:
+
+1. **A hierarchy in two dimensions.** Endpoint and dose. The sequence runs
+   through four endpoints and then repeats for the second dose. This is a richer
+   blocking structure than PARAGON-HF and SELECT together.
+2. **Responder and continuous outcomes in the same trial.** ACR20 and
+   SDAI 3.3 or less are dichotomisations; HAQ-DI and DAS28-CRP are continuous.
+3. **A composite responder definition.** ACR20 dichotomises a seven-component
+   composite. A summary stating that a given percentage of patients "improved",
+   without stating what counts as improvement, commits an error no current code
+   covers. A code for this is expected to follow from annotating this trial, in
+   the same way C6 followed from annotating PARAGON-HF.
+
+**Coverage across the four trials.** Table formats: recurrent events
+(PARAGON-HF), time to first event (SELECT), continuous (vortioxetine),
+responder plus continuous (RA-BEACON). Blocking mechanisms: sequence never
+starts (PARAGON-HF), sequence starts and stops mid-way (SELECT), sequence
+repeats per dose (RA-BEACON).
+
+**Pending before extraction.** Confirm the SAP for each: the multiplicity
+structure across doses in NCT02389816, and for RA-BEACON whether the week-12
+hierarchy held through all four endpoints at each dose, and what the article
+reports for any endpoint falling after a failure.

@@ -21,11 +21,12 @@ Development: four cases, excluded from every final denominator.
 Final: 60 planned, not executed. PARAGON-HF extracted, base summary generated, annotated, not admitted.
 SELECT extracted, base summary generated and annotated in 8 minutes: two
 findings (C6, O11), not admitted. Its two blocked outcomes have intervals
-excluding 1, so C5 there is not resolvable from the interval alone. Two trials outstanding, to be selected with lower visibility.
+excluding 1, so C5 there is not resolvable from the interval alone. Third and fourth trials selected: NCT02389816 (vortioxetine, continuous MADRS,
+three arms) and RA-BEACON (baricitinib, hierarchy across four endpoints and two
+doses, responder plus continuous). Neither extracted yet.
 
 ## Next steps
-1. Select the two remaining trials, with lower visibility than PARAGON-HF and
-   SELECT.
+1. Confirm the SAP for each new trial, then extract both evidence tables.
 2. Build the trial x code coverage matrix, commission codes only: omission codes
    are constructible in any trial by removal.
 3. Confirm the panel size against the measured annotation cost.
