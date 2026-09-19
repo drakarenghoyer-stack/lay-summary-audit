@@ -694,3 +694,47 @@ its source and wrong about its obligations.
 against the source's own practice. That a source did something does not make it
 compliant for a lay summary to repeat it, and the annotation records the code
 rather than the provenance of the habit.
+
+## Multiple codes per finding
+
+A single span of text can violate more than one code legitimately. Example, in
+the vortioxetine trial: PDQ-5 (subjective cognitive complaints) improved with
+p = 0.0001 while DSST (objective processing speed) did not separate from
+placebo. A summary stating "improvement in cognition" generalises from one
+outcome to a domain, which is C1, and if it also presents that as demonstrated
+it attributes confirmation to an unadjusted secondary, which is C2. Both are
+correct about the same sentence.
+
+**Decision: the manifest admits multiple codes per finding.** A finding carries
+a list of codes, not one code.
+
+**Rejected alternatives.** Precedence between codes is simpler and discards the
+information that the summary erred in two distinct ways at once. Redefining
+codes so they cannot overlap produces artificial categories that no longer
+correspond to the sources they were derived from.
+
+### Consequence for denominators
+
+The unit of the reference standard is the **finding**, and a finding may carry
+several codes. This makes the denominators diverge, and they must be reported
+separately:
+
+- **Per-finding.** Denominator is the number of findings. The auditor is correct
+  on a finding if it localises it and assigns at least one of the reference
+  codes. This measures detection.
+- **Per-code.** Denominator is the number of (finding, code) pairs. The auditor
+  is correct on a pair if it assigns that code at the correct location. This
+  measures classification.
+
+The two cannot be pooled, and a single sensitivity figure over the panel is not
+well defined without stating which denominator it uses.
+
+### Consequence for the correspondence rule
+
+The existing boundary case "correct localisation, wrong code" assumed a single
+correct code. It is amended: where the reference standard carries several codes
+for a finding, an auditor assigning a proper subset is a detection hit and a
+partial classification hit. Assigning a code outside the reference set for that
+finding is an additional flag and is handled by the existing rule: if unfounded
+it is a false alert; if founded, the reference standard is revised and the
+revision is logged.
