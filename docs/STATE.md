@@ -26,6 +26,9 @@ three arms) and RA-BEACON (baricitinib, hierarchy across four endpoints and two
 doses, responder plus continuous). Neither extracted yet.
 NCT02389816 uses Holm between doses; both passed, so it describes a blocking
 mechanism without exercising it. It is not a source of C5.
+RA-BEACON (NCT01721044): the 4 mg sequence passed three of four endpoints and
+failed at SDAI, blocking the entire 2 mg dose arm. What is blocked is an arm,
+not an outcome: a third distinct mechanism.
 
 ## Next steps
 1. Confirm the SAP for each new trial, then extract both evidence tables.

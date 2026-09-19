@@ -606,3 +606,35 @@ blocking but absence of control, and the two are not the same situation. Whether
 a summary presenting such a secondary as established is C2 or C5 is to be
 decided before annotation, since the four trials now present three distinct
 situations: sequence never started, sequence interrupted, and no adjustment.
+
+### RA-BEACON (NCT01721044) — hierarchy confirmed, broken at the last endpoint
+
+Genovese MC et al., N Engl J Med 2016;374:1243-1252, DOI 10.1056/NEJMoa1507247.
+Funded by Eli Lilly and Incyte.
+
+Week-12 sequence: ACR20, HAQ-DI, DAS28-CRP, SDAI 3.3 or less, tested first for
+the 4 mg dose and then for 2 mg.
+
+**Outcome.** At 4 mg the first three endpoints reached significance against
+placebo; SDAI 3.3 or less did not. The sequence stops there, and the 2 mg
+comparisons, which follow the completion of the 4 mg sequence, are blocked in
+their entirety.
+
+**Why this is the richest case of the four.** What is blocked here is an entire
+dose arm, not an outcome. PARAGON-HF: the sequence never starts. SELECT: it
+starts and stops at position one. RA-BEACON: it runs three of four and then
+takes down the whole second dimension.
+
+**The characteristic error it enables.** A summary stating that both doses
+improved symptoms is factually plausible, because the article reports figures
+for 2 mg, and is C5: nothing at 2 mg was tested confirmatorily. This shape does
+not arise in any other trial in the panel.
+
+**Also present.** Responder outcomes (ACR20, SDAI remission) alongside
+continuous outcomes (HAQ-DI, DAS28-CRP) in the same trial, and a composite
+responder definition that ACR20 dichotomises across seven components.
+
+**Pending before extraction.** Confirm from the SAP whether the 2 mg sequence is
+gated on completion of the whole 4 mg sequence or on each endpoint in turn, and
+confirm what the article reports for SDAI at 4 mg and for all four endpoints at
+2 mg.
