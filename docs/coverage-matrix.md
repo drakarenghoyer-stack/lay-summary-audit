@@ -9,8 +9,8 @@ case in at least one trial?
 
 |      | PARAGON-HF | SELECT | RA-BEACON | Vortioxetine |
 |------|-----------|--------|-----------|--------------|
-| C1 unsupported efficacy claim | ? | ? | ? | ? |
-| C2 significance misstated | ? | ? | ? | ? |
+| C1 unsupported efficacy claim | medium | medium | medium | **strong** |
+| C2 significance misstated | **strong** | **strong** | **strong** | **strong** |
 | C3 statistical apparatus printed | weak | weak | medium | **strong** |
 | C4 quantitative error | **strong** | medium | **strong** | medium |
 | C5 estimate for a blocked outcome | **strong** | **strong** | **strong** | none |
@@ -63,12 +63,27 @@ case in at least one trial?
   discontinuation; per-term frequencies not extracted. A summary cannot commit
   the full form of the error on data it does not have.
 
-## C1 and C2 — not yet assessed
+## C2 — covered everywhere, and not a constraint on selection
 
-Neither has been located in a specific trial. Both are about what a summary
-asserts rather than about a structural feature of the source, so coverage may
-not be a property of trial selection at all. To be resolved before the panel is
-built.
+Every trial carries a non-significant result a summary could call confirmed:
+PARAGON-HF primary p = 0.06, SELECT cardiovascular death p = 0.07, RA-BEACON
+SDAI p = 0.14, vortioxetine CGI-S p = 0.0609 at one dose. No trial needs to be
+selected for C2.
+
+## C1 — arises from misreading, not only from invention
+
+C1 does not require a claim with no basis in the table. It also arises from
+misinterpreting a result that is present, which gives it structural grounds in
+every trial.
+
+**Vortioxetine is the strongest case.** PDQ-5, subjective cognitive complaints,
+improved at p = 0.0001; DSST, objective processing speed, did not separate from
+placebo. A summary stating "improvement in cognition" misreads a present result
+rather than inventing one: a subjective complaint measure is not processing
+speed.
+
+That example is also where the overlap between C1 and C2 first appeared, and it
+is why the manifest now admits multiple codes per finding.
 
 ## Open question this matrix raises
 
