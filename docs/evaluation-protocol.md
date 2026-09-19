@@ -662,3 +662,35 @@ thing this trial tests that the others cannot.
 **Consequence for annotation.** Reporting a 2 mg effect as established is C5.
 Reporting it as measured, labelled nominal, and qualified per rules 2 and 3 is
 compliant. The distinction rests on the label, not on the number.
+
+### Source practice predates the norm; fidelity and compliance can diverge
+
+RA-BEACON reports nominal p values for comparisons that fall after the
+hierarchical sequence stopped. NEJM Evidence editorial policy holds that p
+values should not be reported from the first non-significant comparison onward.
+
+The article is from March 2016. NEJM Evidence did not exist then. **This is not
+a breach of a norm in force; it is an article that predates the norm.** The
+convergence recorded under rule 3 is recent, and much of the published corpus
+that will feed this panel precedes it. That is itself a finding about the
+corpus, not about any one trial.
+
+**Why the nominal values stay in the evidence table.** Rule 3 governs what a lay
+summary does. The evidence table is not a summary: it is the reference standard,
+and it records what the source states. Removing the nominal p values because a
+later norm disapproves of them would editorialise the source and would decide
+for the generator the very thing the case exists to test. The point of the case
+is that the source offers the number and the summary should not treat it as
+confirmation. With no number offered, there is no test.
+
+**The divergence this exposes.** Where a source reports in a way the current
+norm disapproves, a summary faithful to the source can inherit the
+non-compliance. Fidelity and compliance are not the same axis. This is the same
+divergence that appeared when the generator was faithful to the evidence table
+and failed on mandatory-element completeness: a summary can be accurate about
+its source and wrong about its obligations.
+
+**Consequence for annotation.** A finding is scored against the taxonomy, not
+against the source's own practice. That a source did something does not make it
+compliant for a lay summary to repeat it, and the annotation records the code
+rather than the provenance of the habit.
