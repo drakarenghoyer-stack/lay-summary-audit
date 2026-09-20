@@ -62,3 +62,12 @@ Outside the repository, updated by hand when a value here changes:
 - technical-brief (English, current)
 - briefing-tecnico (Portuguese, marked superseded 2026-09-13; not to be updated)
 - caderno-projeto.pdf
+
+Inside the repository but derived, and not mechanically checked:
+
+- docs/annotation-rules.pdf — typeset extract of the annotation rules, the
+  taxonomy, the correspondence rule and the standing decisions. Its content
+  lives in docs/evaluation-protocol.md and docs/error-taxonomy.md; this file
+  restates it. Regenerate whenever a rule, a code or a standing decision
+  changes. check_claims.py cannot read a PDF, so nothing will flag it when it
+  goes stale.
