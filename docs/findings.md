@@ -418,3 +418,28 @@ the time.
 
 **The general form.** A taxonomy scores what it enumerates. A clean result is
 evidence about the instrument as much as about the object.
+
+## 2026-09-20 — Density is not constructibility, and the error was made twice
+
+The coverage matrix rated C3 "strong" in one trial only and concluded that its
+cases would all derive from one base text, so a binomial interval over them
+would describe one observation repeated. Counting the apparatus in the evidence
+tables showed every trial carries at least one interval or p value: a C3 case
+is constructible in all four.
+
+The rating had measured density — how many places an error can be injected —
+and the independence argument was built on it as though it measured
+constructibility — whether a case can be built at all. Independence is bounded
+by the second.
+
+**While correcting this, the same conflation was made again for C6.**
+Vortioxetine was described as unable to support C6 because per-term
+frequencies had not been extracted. It carries overall adverse event incidence
+by arm, and presenting that as a bare percentage is C6. Constructible; low
+density.
+
+Result: four independent base texts for every commission code except C5, which
+has three. C5's shortfall is structural, not an extraction gap.
+
+The conflation is easy enough to make twice in a row, in the same analysis,
+while correcting it. Worth knowing before panel sizes are fixed per code.

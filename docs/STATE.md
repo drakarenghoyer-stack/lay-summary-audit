@@ -31,10 +31,13 @@ failed at SDAI, blocking the entire 2 mg dose arm. What is blocked is an arm,
 not an outcome: a third distinct mechanism.
 
 ## Next steps
-1. Confirm the SAP for each new trial, then extract both evidence tables.
-2. Build the trial x code coverage matrix, commission codes only: omission codes
-   are constructible in any trial by removal.
-3. Confirm the panel size against the measured annotation cost.
+1. Decide whether to add a fifth trial. It adds a fifth base text for every
+   code, the only case where check_table.py's risk-ratio approximation applies,
+   and a fifth therapeutic area. It is not needed to fix an independence
+   problem: every commission code already has four base texts, C5 three.
+2. Fix the panel size per code against the base-text counts and the measured
+   annotation cost (8 minutes per case; planning figure 10 to 12).
+3. Build the panel.
 
 ## Done
 Development evidence versioned in evidence/development/ with its provenance
