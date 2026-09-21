@@ -31,13 +31,13 @@ failed at SDAI, blocking the entire 2 mg dose arm. What is blocked is an arm,
 not an outcome: a third distinct mechanism.
 
 ## Next steps
-1. Decide whether to add a fifth trial. It adds a fifth base text for every
-   code, the only case where check_table.py's risk-ratio approximation applies,
-   and a fifth therapeutic area. It is not needed to fix an independence
-   problem: every commission code already has four base texts, C5 three.
-2. Fix the panel size per code against the base-text counts and the measured
-   annotation cost (8 minutes per case; planning figure 10 to 12).
-3. Build the panel.
+1. Fix the panel size per code, counting base texts (trials), not injection
+   sites: four for every commission code, three for C5. Annotation cost
+   8 minutes per case; planning figure 10 to 12.
+2. Build the panel.
+
+Decided: four trials. C5 proceeds with three base texts, declared. A fifth trial
+may be added only before the final run, never after results are seen.
 
 ## Done
 Development evidence versioned in evidence/development/ with its provenance

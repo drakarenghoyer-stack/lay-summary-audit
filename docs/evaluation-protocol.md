@@ -738,3 +738,22 @@ partial classification hit. Assigning a code outside the reference set for that
 finding is an additional flag and is handled by the existing rule: if unfounded
 it is a false alert; if founded, the reference standard is revised and the
 revision is logged.
+
+## Decision: four trials; C5 proceeds with three base texts
+
+Every commission code has four independent base texts except C5, which has
+three: the vortioxetine Holm procedure ran to completion and blocked nothing.
+
+A fifth trial with a blocked outcome would take C5 to four. It would also take
+every other code to five, since C1 to C4 and C6 are constructible in any trial.
+C5 therefore always trails by the number of trials without a blocked outcome,
+and parity between codes is not an achievable criterion. The relevant question
+is whether C5's base texts suffice on their own terms.
+
+**Decision.** Three base texts is defensible for an exploratory panel, and is
+declared as a limitation. The panel proceeds with four trials.
+
+**Condition on revisiting.** A fifth trial may be added only before the final
+run. Once auditor results have been seen, adding a trial is a performance-based
+change to the panel, which this protocol prohibits. After the final run, any
+additional trial belongs to a new and separate panel.
