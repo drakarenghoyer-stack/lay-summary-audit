@@ -14,8 +14,8 @@ FORBIDDEN = [
      "stages 1 and 2 are implemented"),
     ("kappa", r"kappa between the auditor|inter-rater kappa will|Kappa against the human annotator",
      "inter-rater kappa withdrawn"),
-    ("prompt.generator", r"generator prompt v0\.[12]\b(?! )",
-     "generator prompt is v0.3"),
+    ("prompt.generator", r"generator prompt v0\.[123]\b(?! )|generator\.md\s+v0\.[123]\b",
+     "generator prompt is v0.4"),
 ]
 
 # (rotulo, regex exigido em pelo menos um documento)

@@ -757,3 +757,26 @@ declared as a limitation. The panel proceeds with four trials.
 run. Once auditor results have been seen, adding a trial is a performance-based
 change to the panel, which this protocol prohibits. After the final run, any
 additional trial belongs to a new and separate panel.
+
+## Generator prompt v0.4 — fitted to the protocol, declared
+
+Generator v0.3 predated annotation rules 3 and 4, code C6 and codes O2 to
+O11. Both base summaries generated under it failed on criteria it had never
+been given. v0.4 incorporates them: natural frequencies for adverse events,
+the ten Annex V elements with the general scope of element 10, figures
+withheld for a blocked comparison as well as a blocked outcome, nominal and
+unadjusted results not presented as demonstrated, and data-dependent testing
+order not presented as pre-specified.
+
+**Why this is legitimate.** The object under evaluation is the auditor. Clean
+base summaries are the material the panel is built from: negatives are clean
+summaries, and positives are clean summaries with one injected error. A base
+carrying spontaneous C6 and O11 would contaminate every positive built on it.
+
+**What it costs, declared.** The rules in v0.4 were derived from reading
+outputs on PARAGON-HF and SELECT. Generator error rate measured on those
+trials is therefore an in-sample figure, not an estimate of how the prompt
+performs on trials it was not fitted to. It is reported as such or not at
+all. RA-BEACON and vortioxetine were not used to derive the rules, but the
+same prompt author read them, so they are not held out in any strict sense
+either.

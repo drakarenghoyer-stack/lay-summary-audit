@@ -20,7 +20,7 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 | panel.negatives | negatives in the final panel | 12 |
 | panel.status | execution status of the final panel | designed, not executed |
 | dev.cases | development cases | 4 |
-| prompt.generator | generator prompt version | v0.3 |
+| prompt.generator | generator prompt version | v0.4 |
 | prompt.auditor | auditor prompt version | v0.3 |
 | stage0 | extraction from CSR | not implemented |
 | stage1 | generator | implemented, runs on development cases |

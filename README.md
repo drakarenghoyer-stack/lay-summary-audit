@@ -61,7 +61,7 @@ All examples currently in this repository are synthetic. No CSR content is repro
     error-taxonomy.md         the codes, with the source each derives from
     findings.md               dated observations, with n
     prompts/
-    generator.md              v0.2
+    generator.md              v0.4
     auditor.md                v0.1
     pipeline/
     generate.py               stage 1

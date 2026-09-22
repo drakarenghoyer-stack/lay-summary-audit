@@ -8,7 +8,7 @@ Stages 1 and 2. Stage 0 does not exist.
 ## Versions
 Taxonomy v0.4, seventeen codes: C1-C6 commission, O1-O11 omission.
 O2-O11 map one-to-one onto the ten Annex V elements; see docs/annexV-checklist.md.
-Generator prompt v0.3. Auditor prompt v0.3. Four annotation rules.
+Generator prompt v0.4. Auditor prompt v0.3. Four annotation rules.
 
 ## What has been measured
 No metric on the final panel; no result reported. Annotation cost measured:
@@ -31,10 +31,16 @@ failed at SDAI, blocking the entire 2 mg dose arm. What is blocked is an arm,
 not an outcome: a third distinct mechanism.
 
 ## Next steps
-1. Fix the panel size per code, counting base texts (trials), not injection
-   sites: four for every commission code, three for C5. Annotation cost
-   8 minutes per case; planning figure 10 to 12.
-2. Build the panel.
+1. Regenerate the four base summaries with generator v0.4 and review each
+   against the Annex V checklist and taxonomy v0.4. Clean ones become
+   negatives and injection bases.
+2. Update the auditor to taxonomy v0.4. Auditor prompt v0.3 knows six codes
+   (C1-C5, O1) and audit.py rejects any other as unknown. Running the panel
+   now would score the auditor on eleven codes it cannot produce.
+3. Fix the panel size per code, counting base texts, not injection sites:
+   four for every commission code, three for C5. Settle how O2-O11 are
+   sampled and how many distinct negatives each trial supplies.
+4. Build the panel.
 
 Decided: four trials. C5 proceeds with three base texts, declared. A fifth trial
 may be added only before the final run, never after results are seen.
