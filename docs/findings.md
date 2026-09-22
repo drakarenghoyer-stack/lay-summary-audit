@@ -443,3 +443,24 @@ has three. C5's shortfall is structural, not an extraction gap.
 
 The conflation is easy enough to make twice in a row, in the same analysis,
 while correcting it. Worth knowing before panel sizes are fixed per code.
+
+## 2026-09-22 — Mention versus use, third occurrence, and a change of policy
+
+check_claims flagged a line in STATE.md reading "auditor prompt v0.3 knows six
+codes". The line mentions a superseded count in order to say the auditor is
+stale; it does not assert that the taxonomy has six codes. Same distinction as
+the first calibration false positive, on a line whose purpose was to correct
+the old count.
+
+The first occurrence was fixed by widening the pattern with a lookbehind. This
+one was fixed by rewording the text instead.
+
+**Reason for the change.** Each new mention would need another exception, and a
+pattern accumulating exceptions becomes regex over meaning — the thing the
+register already declines to do for prose claims. The forbidden patterns are
+kept narrow and literal; where correct text collides with one, the text is
+reworded.
+
+**Cost.** Accepted: the register can no longer be used to write about its own
+superseded values in the checked documents. Superseded counts are discussed in
+findings.md, which is not checked.

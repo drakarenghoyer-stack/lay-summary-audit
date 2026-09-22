@@ -34,9 +34,9 @@ not an outcome: a third distinct mechanism.
 1. Regenerate the four base summaries with generator v0.4 and review each
    against the Annex V checklist and taxonomy v0.4. Clean ones become
    negatives and injection bases.
-2. Update the auditor to taxonomy v0.4. Auditor prompt v0.3 knows six codes
-   (C1-C5, O1) and audit.py rejects any other as unknown. Running the panel
-   now would score the auditor on eleven codes it cannot produce.
+2. Update the auditor to taxonomy v0.4. Auditor prompt v0.3 knows only
+   C1-C5 and O1, and audit.py rejects any other code as unknown. Running the
+   panel now would score the auditor on eleven codes it cannot produce.
 3. Fix the panel size per code, counting base texts, not injection sites:
    four for every commission code, three for C5. Settle how O2-O11 are
    sampled and how many distinct negatives each trial supplies.
