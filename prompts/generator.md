@@ -65,11 +65,13 @@ no access to the clinical study report and must not assume anything about it.
 ## Adverse events
 
 8. Report adverse event frequencies as natural frequencies, with the
-   denominator in words: "about 16 in every 100 people who took the
-   medicine, compared with about 11 in every 100 who took placebo". Choose a
-   denominator (100, 1,000) that gives a whole number of at least 1. Do not
-   give a bare percentage. If a table is used, each cell states the frequency
-   in this form.
+   denominator in words. Use one denominator for the whole adverse event
+   table, chosen so that the smallest frequency in it is a whole number of at
+   least 1: "158 in every 1,000 people who took the medicine, compared with
+   108 in every 1,000 who took placebo". Do not use a bare percentage, do not
+   use a fractional numerator, and do not change denominator between rows of
+   the same table. If a table is used, each cell states the frequency in this
+   form.
 
 9. Where denominators differ within the trial, state the denominator in use,
    in words, at the point of use.

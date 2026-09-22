@@ -780,3 +780,34 @@ performs on trials it was not fitted to. It is reported as such or not at
 all. RA-BEACON and vortioxetine were not used to derive the rules, but the
 same prompt author read them, so they are not held out in any strict sense
 either.
+
+### Rule 4 — amendment: one denominator per adverse event table
+
+Rule 4 as first written required a denominator giving a whole number of at
+least 1, chosen per frequency. Applied to PARAGON-HF that yields 16 in every
+100 for hypotension and 6 in every 1,000 for angioedema: different
+denominators within a single table.
+
+GLSP numeracy principles require consistent denominators. The rule as written
+therefore produced a violation of the source it was derived from, and left the
+annotation of such a table undecidable.
+
+**Amendment. One denominator per adverse event table**, chosen so that the
+smallest frequency in the table is a whole number of at least 1. In PARAGON-HF
+this is 1,000 throughout: 158 in every 1,000, 108 in every 1,000, 6 in every
+1,000.
+
+**Rejected alternatives.** A fixed denominator with a fractional numerator
+("0.6 in every 100") defeats the purpose of a natural frequency: the reader
+cannot picture six tenths of a person, which is what the whole-number
+principle exists to prevent. Per-row denominators read better row by row and
+leave the reader converting between rows in order to compare them, which is
+the calculation rule 4 exists to remove.
+
+**Consequence for the code.** A denominator that differs between rows of the
+same adverse event table is C6.
+
+**Version note.** Generator prompt v0.4 was amended in place to carry this,
+before it had generated any output. No artefact references the earlier text.
+Every run records the prompt content hash, so the text in force at execution
+is recoverable regardless of the version label.
