@@ -464,3 +464,31 @@ reworded.
 **Cost.** Accepted: the register can no longer be used to write about its own
 superseded values in the checked documents. Superseded counts are discussed in
 findings.md, which is not checked.
+
+## 2026-10-03 — The verification command was the fourth exposure
+
+Before publishing the repository, a sweep ran to confirm no key had ever been
+committed. The sweep included `grep -rn "sk-ant" .`, which read the untracked
+`.env` and printed the live key to the terminal and into the assistant
+transcript. The key was revoked and rotated.
+
+The git history itself was clean: the only two occurrences across 99 commits
+were the string `sk-ant` inside `docs/credentials.md`, in the text of the rules.
+Mention, not use — the same distinction that has now bitten this project four
+separate times.
+
+**The pattern across all four exposures.** A photograph of `cat .env`; a typed
+prefix with the value pasted over it; a key passed as an argument and captured
+by shell history; and now a recursive search for the key's own pattern. Four
+different vectors, each introduced while checking or configuring rather than
+while working. **Every routine for verifying a secret is itself a path by which
+the secret escapes.**
+
+**Consequence.** The per-vector rules were a losing position: a fifth vector
+would exist. The key now lives in the shell profile and the project tree holds
+no value at all. What the repository does not contain cannot leak from it.
+
+**Residual limitation.** The key is still in a file, `~/.zshrc`. It is outside
+the repository, outside what gets photographed, and outside any search run
+inside the project, which is the whole of the improvement. It is not secret
+storage.
