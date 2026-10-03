@@ -1,4 +1,21 @@
-# Evaluation protocol — v0.1
+# Evaluation protocol — v0.2
+
+## Version history
+
+The file sat at v0.1 from its creation until 2026-10-03, through every addition
+below. The number was not incremented because nothing referenced it and the
+claims register did not track it. It is now tracked.
+
+**v0.2** — annotation rules 2, 3 and 4, with the rule 4 amendment on a single
+denominator per adverse event table; the correspondence rule with six resolved
+boundary cases and three later amendments; multiple codes per finding, with
+detection and classification denominators reported separately; inter-rater kappa
+superseded; panel design, scope and source selection criteria; the four
+confirmed trials and the decision to proceed with three base texts for C5; the
+correction of the taxonomy count and panel coverage; and the declaration that
+generator prompt v0.4 is fitted to this protocol.
+
+**v0.1** — normative sources pinned by version, and annotation rule 1.
 
 ## Normative sources (pinned)
 

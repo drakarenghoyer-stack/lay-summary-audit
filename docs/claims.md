@@ -34,6 +34,7 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 | provenance.recorded | fields recorded at execution time | prompt hash, table hash, HEAD commit, working tree state |
 | evidence.location | where denominator-bearing output lives | evidence/, versioned; runs/ ignored for scratch |
 | annotation.rules | annotation rules in the protocol | 4 |
+| protocol.version | version of evaluation-protocol.md | v0.2 |
 | annotation.unit | unit of the reference standard | the finding; a finding may carry several codes |
 | metrics.denominators | denominators reported | per-finding (detection) and per-code (classification), reported separately, never pooled |
 | model | model identifier in scripts | claude-sonnet-5 |

@@ -14,6 +14,8 @@ FORBIDDEN = [
      "stages 1 and 2 are implemented"),
     ("kappa", r"kappa between the auditor|inter-rater kappa will|Kappa against the human annotator",
      "inter-rater kappa withdrawn"),
+    ("protocol.version", r"[Ee]valuation protocol [—-] v0\.1\b",
+     "evaluation protocol is v0.2"),
     ("prompt.generator", r"generator prompt v0\.[123]\b(?! )|generator\.md\s+v0\.[123]\b",
      "generator prompt is v0.4"),
 ]
