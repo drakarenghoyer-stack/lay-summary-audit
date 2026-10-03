@@ -110,3 +110,15 @@ TO DECIDE. Suggested split: MIT for pipeline/, CC BY 4.0 for docs/ and prompts/.
 The final panel is designed and has not been executed. Development cases are excluded from every final-panel denominator.
 
 Before running anything, read `docs/credentials.md`.
+
+## Licence
+
+- `pipeline/` — MIT, see `LICENSE`.
+- `docs/` and `prompts/` — CC BY 4.0, see `LICENSE-DOCS`. Reuse requires
+  attribution.
+
+The evidence tables in `examples/` are hand-made factual extractions from
+published articles, each field traceable to a named article, table or section.
+The extraction is covered by the licence above; the articles themselves are not
+mine to license and remain the copyright of their publishers. Every table names
+its source publication with a DOI.
