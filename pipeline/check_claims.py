@@ -16,6 +16,8 @@ FORBIDDEN = [
      "inter-rater kappa withdrawn"),
     ("protocol.version", r"[Ee]valuation protocol [—-] v0\.1\b",
      "evaluation protocol is v0.2"),
+    ("corpus.extracted", r"[Aa]ll examples .{0,30}are synthetic|only synthetic (evidence )?tables",
+     "four published trials have been extracted"),
     ("prompt.generator", r"generator prompt v0\.[123]\b(?! )|generator\.md\s+v0\.[123]\b",
      "generator prompt is v0.4"),
 ]

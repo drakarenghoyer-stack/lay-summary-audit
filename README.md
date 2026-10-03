@@ -2,7 +2,7 @@
 
 A generator plus source-blinded, evidence-constrained auditor pipeline for lay summaries produced under EU CTR 536/2014, Annex V, with a defined protocol for measuring generator error rate and auditor accuracy.
 
-> **Status — stages 1 and 2 implemented, evaluation not started.** Architecture specified. Prompts written and versioned. Evaluation protocol with pinned normative sources and four annotation rules. Error taxonomy v0.4: 17 codes, 6 commission (C1-C6) and 11 omission (O1-O11), the omission codes derived one-to-one from the ten Annex V elements. Stages 1 and 2 run end to end on synthetic evidence tables. **The reference standard is not annotated, so no metric has been computed and no result is reported.** Observations to date are in `docs/findings.md`, each with the n at which it was made.
+> **Status — stages 1 and 2 implemented, evaluation not started.** Architecture specified. Prompts written and versioned. Evaluation protocol with pinned normative sources and four annotation rules. Error taxonomy v0.4: 17 codes, 6 commission (C1-C6) and 11 omission (O1-O11), the omission codes derived one-to-one from the ten Annex V elements. Stages 1 and 2 run end to end on synthetic evidence tables and on four published trials extracted by hand, each field traceable to a named article, table or section. **The reference standard is not annotated, so no metric has been computed and no result is reported.** Observations to date are in `docs/findings.md`, each with the n at which it was made.
 
 The deliverable of this project is not the pipeline. It is the quantitative characterisation of the pipeline. Until the reference standard exists, that characterisation does not.
 
@@ -45,13 +45,23 @@ See `docs/evaluation-protocol.md` for pinned sources and annotation rules, and `
 
 ## Corpus
 
-Public sources only. No identifiable patient data.
+Public sources only. No identifiable patient data. No CSR content is reproduced.
 
-- Health Canada — Public Release of Clinical Information
-- EMA CTIS public portal
-- Good Lay Summary Practice (EU guidance) — one of the sources of the taxonomy
+Four published trials have been extracted into structured evidence tables, each
+field traceable to a named article, table or section, and each table verified
+arithmetically where the figures permit it:
 
-All examples currently in this repository are synthetic. No CSR content is reproduced.
+| Trial | Design feature it contributes |
+|---|---|
+| PARAGON-HF (NEJM 2019) | Primary fails; the confirmatory sequence never starts |
+| SELECT (NEJM 2023) | Primary succeeds; the sequence stops at position one |
+| RA-BEACON (NEJM 2016) | Sequence runs three of four endpoints, blocking an entire dose arm |
+| NCT02389816, vortioxetine | Holm between doses, described but never exercised |
+
+Two synthetic tables remain, used for the development cases only.
+
+Candidate corpora for later extraction: Health Canada Public Release of Clinical
+Information, and the EMA CTIS public portal.
 
 ## Repository layout
     
@@ -101,11 +111,7 @@ This is a methodological portfolio exercise. It is not a validated system, it ha
 
 ## Author
 
-Karen Guimaraes Hoyer, MD - linkedin.com/in/karenguimaraeshoyer
-
-## License
-
-TO DECIDE. Suggested split: MIT for pipeline/, CC BY 4.0 for docs/ and prompts/.
+Karen Guimarães Hoyer, MD — kghoyer.com/portfolio/ · linkedin.com/in/karenguimaraeshoyer
 
 The final panel is designed and has not been executed. Development cases are excluded from every final-panel denominator.
 

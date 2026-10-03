@@ -31,6 +31,7 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 | refstandard | reference standard annotation | development cases only |
 | trials.selected | published trials selected | 4 of 4 (PARAGON-HF, SELECT, NCT02389816 vortioxetine, RA-BEACON baricitinib); EMPACT-MI remains a fallback |
 | extraction.complete | trials with complete extraction | 1 (PARAGON-HF) |
+| corpus.extracted | published trials with a structured evidence table | 4 (PARAGON-HF, SELECT, RA-BEACON, NCT02389816) |
 | provenance.recorded | fields recorded at execution time | prompt hash, table hash, HEAD commit, working tree state |
 | evidence.location | where denominator-bearing output lives | evidence/, versioned; runs/ ignored for scratch |
 | annotation.rules | annotation rules in the protocol | 4 |
