@@ -2,6 +2,11 @@
 
 If this file and any other document disagree, check the repository.
 
+Before scoring anything, or before answering any question about how a case
+is annotated, read docs/decisions.md. It indexes every binding decision
+with a pointer into the protocol. Do not re-derive a rule by grepping the
+protocol; three settled questions were reopened that way on 2026-10-03.
+
 ## What runs
 Stages 1 and 2. Stage 0 does not exist.
 
