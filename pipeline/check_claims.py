@@ -2,12 +2,13 @@ import pathlib
 import re
 import sys
 
-DOCS = ["README.md", "docs/evaluation-protocol.md", "docs/error-taxonomy.md", "docs/STATE.md"]
+DOCS = ["README.md", "CLAUDE.md", "docs/evaluation-protocol.md",
+        "docs/error-taxonomy.md", "docs/STATE.md", "docs/decisions.md"]
 
 # (rotulo, regex proibido, motivo)
 FORBIDDEN = [
-    ("taxonomy.count", r"(?<!describing it as )\b(5|six|5|6|five) codes\b|\b13[- ]code taxonomy\b|seis c[oó]digos",
-     "taxonomy has 16 codes: C1-C5, O1-O11"),
+    ("taxonomy.count", r"(?<!describing it as )\b(5|six|6|five|16|sixteen) codes\b|\b13[- ]code taxonomy\b|seis c[oó]digos",
+     "taxonomy has 17 codes: C1-C6, O1-O11"),
     ("panel.total", r"\b54 cases\b|\bTotal 54\b",
      "final panel is 60 cases"),
     ("stage1/2", r"pipeline is not yet implemented|has not been implemented|nothing has been run",
@@ -20,6 +21,8 @@ FORBIDDEN = [
      "four published trials have been extracted"),
     ("prompt.generator", r"generator prompt v0\.[123]\b(?! )|generator\.md\s+v0\.[123]\b",
      "generator prompt is v0.4"),
+    ("repo.url", r"drakarenghoyer-stack",
+     "the repository is github.com/kghoyer/lay-summary-audit; the account was renamed on 2026-10-03"),
 ]
 
 # (rotulo, regex exigido em pelo menos um documento)

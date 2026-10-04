@@ -32,11 +32,18 @@ rejected alternative and history; the index is the part that binds.
    Open the section and read it. grep returns lines; rules live in paragraphs,
    and a truncated paste looks exactly like an absent rule.
 
-3. **Do not run a git write operation through an agent shell in this
-   repository** — no add, commit, push, checkout, gc, or anything else that
-   writes to `.git`. It leaves `.git/*.lock` files that only the user can
-   remove, and it has blocked her working tree before. Reads, file writes and
-   `pipeline/check_claims.py` are fine. Hand her the commit command instead.
+3. **Do not run any git command through an agent shell in this repository.**
+   Not `add`, `commit`, `push`, `checkout`, `gc` — and not `status`, `log`,
+   `diff` or `check-ignore` either. The read commands refresh the index, which
+   creates `.git/index.lock`, and the sandbox cannot unlink it: the lock is
+   left behind and blocks the user's own git until she removes it by hand. An
+   earlier version of this rule said reads were safe; that was wrong, and it
+   was disproved by `git status` on 2026-10-04.
+
+   To see what changed, use the filesystem, not git: `ls -la`, `find . -newer
+   <file>`, or read the file. To know whether a file is tracked, ask the user.
+   Hand her every git command to run herself, in a fenced block she can paste.
+   File writes and `python3 pipeline/check_claims.py` are fine.
 
 4. **Read `docs/credentials.md` before any command that could touch a key.**
    Never grep for a secret's pattern: the match prints the secret. That

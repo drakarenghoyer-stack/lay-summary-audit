@@ -7,7 +7,7 @@ other document must agree with it.
 document repeats it, the check passes. Whether a value is true remains a human
 judgement.
 
-Update this file first, then propagate. Last updated: 2026-09-13.
+Update this file first, then propagate. Last updated: 2026-10-04.
 
 | id | claim | current value |
 |---|---|---|
@@ -39,6 +39,8 @@ Update this file first, then propagate. Last updated: 2026-09-13.
 | annotation.unit | unit of the reference standard | the finding; a finding may carry several codes |
 | metrics.denominators | denominators reported | per-finding (detection) and per-code (classification), reported separately, never pooled |
 | model | model identifier in scripts | claude-sonnet-5 |
+| repo.url | canonical repository | github.com/kghoyer/lay-summary-audit (account renamed from drakarenghoyer-stack on 2026-10-03) |
+| decisions.index | binding decisions recorded in docs/decisions.md | 20 |
 
 | metrics.matching_rule | principal detection rule | correct target code and unequivocal localisation; supporting reference assessed separately |
 | taxonomy.c5_policy | C5 presentation policy | any effect estimate for an outcome outside the confirmatory testing sequence is C5, even when qualified; nominal favourability is not required |
@@ -52,11 +54,15 @@ Nothing signals the omission.
 
 ## Documents that must agree
 
-Inside the repository, checked mechanically:
+Inside the repository, checked mechanically — this list is the `DOCS` list in
+`pipeline/check_claims.py` and must match it:
 
 - README.md
+- CLAUDE.md
 - docs/evaluation-protocol.md
 - docs/error-taxonomy.md
+- docs/STATE.md
+- docs/decisions.md
 
 Outside the repository, updated by hand when a value here changes:
 
